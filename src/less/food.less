@@ -1,0 +1,60 @@
+.food {
+	background-color: @cream;
+	padding-top: 104px;
+
+	&__wrapper {
+		background: url(../img/food-bg.jpg) / cover;
+		color: @white;
+		padding-top: 50px;
+		padding-bottom: 110px;
+	}
+
+	&__nav {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__button {
+		margin: 0 25px;
+	}
+
+	&__menu {
+		max-width: 1290px;
+		margin: 78px auto 0;
+		font-family: Georgia;
+		background: rgba(76, 76, 78, 0.5);
+	}
+
+	&__list {
+		display: flex;
+		box-sizing: border-box;
+
+		&--main {
+			.food__item {
+				border-color: transparent;
+
+				&:first-child {
+					border-right: 6px solid @gold-headerSlider;
+
+					&::after {
+						content: '';
+						display: block;
+						width: 140px;
+						height: 70px;
+						margin: 0 auto;
+						background: url(../img/foodMenu-main.svg) center;
+					}
+				}
+			}
+		}
+	}
+
+	&__item {
+		padding: 50px 84px;
+		border: 6px solid @gold-headerSlider;
+
+		&:last-child {
+			border-left: none;
+		}
+	}
+}

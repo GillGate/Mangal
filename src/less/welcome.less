@@ -1,0 +1,42 @@
+.welcome {
+	padding-top: 90px;
+	background-color: @cream;
+
+	&__wrapper {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	&__img {
+		padding: 35px 0 55px;
+	}
+
+	&__title {
+		&::after {
+			width: 168px;
+		}
+	}
+
+	&__text {
+
+		p {
+			margin-bottom: 25px;
+			font-size: 18px;
+			line-height: 20px;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			width: 38px;
+			height: 50px;
+			margin: 50px auto;
+			background: url(../img/welcome-arrows.svg);
+		}
+	}
+
+	&__food {
+		margin-top: 110px;
+		text-align: center;
+	}
+}
