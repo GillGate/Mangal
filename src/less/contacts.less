@@ -1,16 +1,55 @@
 .contacts {
 	padding-top: 150px;
+	padding-bottom: 138px;
 	text-align: center;
 	background-color: @cream;
+
+	a {
+		color: @black;
+	}
 
 	&__text {
 		margin: 0 auto;
 		max-width: 770px;
+		font-size: 18px;
+		line-height: 20px;
 	}
 
 	&__img {
-		max-width: 816px;
-		margin: 0 auto;
+		max-width: 818px;
+		margin: 120px auto 146px;
+		position: relative;
+		z-index: 1;
+
+		img {
+			margin-left: -190px;
+		}
+
+		&::before {
+			content: 'C';
+			font-size: 883px;
+			font-family: Georgia;
+			color: @grey;
+			opacity: 0.2;
+			position: absolute;
+			z-index: -1;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			width: 390px;
+			height: 265px;
+			background: url(../img/contacts-leaves.svg) center;
+			opacity: 0.5;
+			position: absolute;
+			z-index: -1;
+			right: -20px;
+    		bottom: 90px;
+		}
 	}
 
 	&__phone {
@@ -19,11 +58,10 @@
 
 		a {
 			display: inline-block;
-			color: @black;
 			font-weight: bold;
 			font-size: 50px;
 			line-height: 60px;
-			// margin-top: 20px;
+			margin-top: 20px;
 			padding-bottom: 20px;
 			border-bottom: 5px solid @gold-title;
 
@@ -37,7 +75,80 @@
 			// 	background-color: @gold-title;
 			// }
 		}
-		
+	}
 
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+		margin-top: 150px;
+	}
+
+	&__map {
+		max-width: 845px;
+		position: relative;
+		z-index: 1;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 100em;
+			height: 100em;
+			max-width: 845px;
+			max-height: 398px;
+			background-color: @gold-title;
+			position: absolute;
+			top: -40px;
+			left: -40px;
+			z-index: -1;
+		}
+	}
+
+	&__info {
+		text-align: left;
+		margin-left: 84px;
+		display: flex;
+		flex-direction: column;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 74px;
+			height: 84px;
+			margin-bottom: 46px;
+			background: url(../img/contacts-logo.svg) center;
+		}
+	}
+
+	&__address {
+		margin: 56px 0;
+		font-size: 18px;
+		line-height: 20px;
+
+		p {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__links {
+
+	}
+
+	&__link {
+		display: inline-block;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 21px;
+		margin-bottom: 52px;
+
+		&::before {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			width: 40px;
+			height: 2px;
+			margin-right: 8px;
+			background-color: @gold-title;
+		}
 	}
 }

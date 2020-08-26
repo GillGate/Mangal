@@ -4,8 +4,8 @@ const settings = {
     columns: 12,
     offset: '0px',
     container: {
-        maxWidth: '1640px',
-        fields: '0px'
+        maxWidth: '1920px',
+        fields: '85px'
     },
     breakPoints: {
         md: {

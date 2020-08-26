@@ -3,8 +3,9 @@
 	padding-top: 104px;
 
 	&__wrapper {
-		background: url(../img/food-bg.jpg) / cover;
+		background: #392f2d url(../img/food-bg.jpg) top no-repeat / fixed;
 		color: @white;
+		min-height: 750px;
 		padding-top: 50px;
 		padding-bottom: 110px;
 	}
@@ -14,24 +15,60 @@
 		justify-content: center;
 	}
 
+	.button--active {
+		border: 2px solid @gold-title;
+	}
+
 	&__button {
 		margin: 0 25px;
+		border: 2px solid transparent;
 	}
 
 	&__menu {
-		max-width: 1290px;
-		margin: 78px auto 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 78px;
 		font-family: Georgia;
-		background: rgba(76, 76, 78, 0.5);
+		position: relative;
 	}
 
 	&__list {
+		opacity: 0;
 		display: flex;
-		box-sizing: border-box;
+		max-width: 1300px;
+		background: rgba(76, 76, 78, 0.5);
+		transition: opacity .3s ease;
+		position: absolute;
+
+		&--active {
+			opacity: 1 !important;
+			position: relative;
+			z-index: 1;
+		}
+
+		&--salads {
+
+			.food__item {
+				&:last-child {
+					border-left: none;
+
+					&::after {
+						content: '';
+						display: block;
+						width: 322px;
+						height: 114px;
+						margin: auto;
+						background:  url(../img/food-pepper.svg) center no-repeat;
+					}
+				}
+			}
+		}
 
 		&--main {
+		
 			.food__item {
-				border-color: transparent;
+				border: 6px solid transparent;
 
 				&:first-child {
 					border-right: 6px solid @gold-headerSlider;
@@ -41,20 +78,45 @@
 						display: block;
 						width: 140px;
 						height: 70px;
-						margin: 0 auto;
-						background: url(../img/foodMenu-main.svg) center;
+						margin: auto;
+						background: url(../img/food-main.svg) center no-repeat;
 					}
 				}
 			}
 		}
+
+		&--dishes {
+			.food__item {
+				&::after {
+					content: '';
+					display: block;
+					width: 134px;
+					height: 102px;
+					margin: auto;
+					background: url(../img/food-dishes.svg) center no-repeat;
+				}
+			}
+		}
+
+		&--deserts {
+			.food__item {
+				&::after {
+					content: '';
+					display: block;
+					width: 148px;
+					height: 138px;
+					margin: auto;
+					background: url(../img/food-mushrooms.svg) center no-repeat;
+				}
+			}
+		}
+
 	}
 
 	&__item {
+		width: 640px;
+		box-sizing: border-box;
 		padding: 50px 84px;
 		border: 6px solid @gold-headerSlider;
-
-		&:last-child {
-			border-left: none;
-		}
 	}
 }

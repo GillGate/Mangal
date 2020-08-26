@@ -15,16 +15,16 @@
 				</div>
 				<div class="nav">
 					<nav class="nav__wrapper">
-						<a href="#" class="nav__link">About Us</a>
-						<a href="#" class="nav__link">Our Food</a>
-						<a href="#" class="nav__link">Our Drinks</a>
-						<a href="#" class="nav__link">Gallery</a>
-						<a href="#" class="nav__link">Contacts</a>
+						<a href="#about" class="nav__link">About Us</a>
+						<a href="#food" class="nav__link">Our Food</a>
+						<a href="#drinks" class="nav__link">Our Drinks</a>
+						<a href="#gallery" class="nav__link">Gallery</a>
+						<a href="#contacts" class="nav__link">Contacts</a>
 					</nav>
 					<div class="nav__lang">
 						<span class="color--gold">En</span> / Cz
 					</div>
-					<div class="nav__burger">-</div>
+					<div class="nav__burger"></div>
 				</div>
 			</div>
 			<div class="header__main">
@@ -33,7 +33,7 @@
 					an excellent <br>
 					<span class="color--gold">dishes</span>
 				</h1>
-				<div class="header__contacts">
+				<div class="links">
 					<a href="#">
 						<img src="img/facebook.svg" alt="Facebook Page">
 					</a>
@@ -44,7 +44,7 @@
 				<div class="headerSlider">
 					<div class="headerSlider__item">
 						<div class="headerSlider__img">
-							<img src="img/headerSlider-1.jpg" alt="Pirzola Izgarda">
+							<img src="img/slider-1.jpg" alt="Pirzola Izgarda">
 						</div>
 						<div class="headerSlider__caption">
 							<div class="headerSlider__order">
@@ -53,17 +53,67 @@
 							<h3 class="headerSlider__title">Pirzola Izgarda</h3>
 						</div>
 					</div>
+					<div class="headerSlider__item">
+						<div class="headerSlider__img">
+							<img src="img/slider-2.jpg" alt="Pirzola Izgarda">
+						</div>
+						<div class="headerSlider__caption">
+							<div class="headerSlider__order">
+								<span>02</span> / 07
+							</div>
+							<h3 class="headerSlider__title">Pirzola Izgarda</h3>
+						</div>
+					</div>
+					<div class="headerSlider__item">
+						<div class="headerSlider__img">
+							<img src="img/slider-3.jpg" alt="Pirzola Izgarda">
+						</div>
+						<div class="headerSlider__caption">
+							<div class="headerSlider__order">
+								<span>03</span> / 07
+							</div>
+							<h3 class="headerSlider__title">Pirzola Izgarda</h3>
+						</div>
+					</div>
+					<div class="headerSlider__item">
+						<div class="headerSlider__img">
+							<img src="img/slider-4.jpg" alt="Pirzola Izgarda">
+						</div>
+						<div class="headerSlider__caption">
+							<div class="headerSlider__order">
+								<span>04</span> / 07
+							</div>
+							<h3 class="headerSlider__title">Pirzola Izgarda</h3>
+						</div>
+					</div>
+					<div class="headerSlider__item">
+						<div class="headerSlider__img">
+							<img src="img/slider-5.jpg" alt="Pirzola Izgarda">
+						</div>
+						<div class="headerSlider__caption">
+							<div class="headerSlider__order">
+								<span>05</span> / 07
+							</div>
+							<h3 class="headerSlider__title">Pirzola Izgarda</h3>
+						</div>
+					</div>
 				</div>
 				<div class="headerSlider__nav">
 					<div class="headerSlider__dots">
 						<div class="headerSlider__dot">
-							<img src="img/headerSlider-2.jpg" alt="">
+							<img src="img/slider-1.jpg" alt="Pirzola Izgarda">
+						</div>
+						<div class="headerSlider__dot headerSlider__dot--current">
+							<img src="img/slider-2.jpg" alt="Pirzola Izgarda">
 						</div>
 						<div class="headerSlider__dot">
-							<img src="img/headerSlider-3.jpg" alt="">
+							<img src="img/slider-3.jpg" alt="Pirzola Izgarda">
 						</div>
 						<div class="headerSlider__dot">
-							<img src="img/headerSlider-4.jpg" alt="">
+							<img src="img/slider-4.jpg" alt="Pirzola Izgarda">
+						</div>
+						<div class="headerSlider__dot">
+							<img src="img/slider-5.jpg" alt="Pirzola Izgarda">
 						</div>
 					</div>
 					<div class="headerSlider__buttons">
@@ -73,11 +123,11 @@
 				</div>
 			</div>
 		</div>
-		<a class="header__scroll">
+		<a href="#about" class="header__scroll">
 			Scroll down
 		</a>
 	</header>
-	<section class="welcome">
+	<section class="welcome" id="about">
 		<div class="container">
 			<div class="welcome__wrapper">
 			    <div class="welcome__img">
@@ -100,28 +150,161 @@
 			</div>
 		</div>
 	</section>
-	<section class="food">
+	<section class="food" id="food">
 		<h2 class="title food__title">
 			Our Food
 		</h2>
 		<div class="food__wrapper">
 			<div class="container">
 				<div class="food__nav">
-					<button class="button food__button">Soups</button>
-					<button class="button food__button">Starters and salads</button>
-					<button class="button button--active food__button">Main grilled dishes</button>
-					<button class="button food__button">Specialities</button>
-					<button class="button food__button">Side dishes</button>
-					<button class="button food__button">Desserts</button>
+					<button class="button food__button" data-list="soups">Soups</button>
+					<button class="button food__button" data-list="salads">Starters and salads</button>
+					<button class="button button--active food__button" data-list="main">Main grilled dishes</button>
+					<button class="button food__button" data-list="specialities">Specialities</button>
+					<button class="button food__button" data-list="dishes">Side dishes</button>
+					<button class="button food__button" data-list="deserts">Desserts</button>
 				</div>
 				<div class="food__menu">
-					<ul class="food__list food__list--main">
+					<ul class="food__list food__list--salads">
 						<li class="food__item">
 							<ul class="foodMenu">
 								<li>
 									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">ADANA KEBAB (160g)</h4>
-										<span class="foodMenu__price">260 kc</span>
+										<h4 class="foodMenu__title">Hummus</h4> &nbsp;
+										<span class="foodMenu__weight">(100g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">95 kč</span>
+									</div>
+									<p class="foodMenu__text">
+										Mashed chickpeas blended with tahini spice, salt, garlic and olive oil
+									</p>
+								</li>
+								<li>
+									<div class="foodMenu__name">
+										<h4 class="foodMenu__title">ŞakŞuka</h4> &nbsp;
+										<span class="foodMenu__weight">(100g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">125 kč</span>
+									</div>
+									<p class="foodMenu__text">
+										Mixture of eggplant, tomato and sweet pepper fried on pan with finely chopped garlic
+									</p>
+								</li>
+								<li>
+									<div class="foodMenu__name">
+										<h4 class="foodMenu__title">Haidari</h4> &nbsp;
+										<span class="foodMenu__weight">(100g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">95 kč</span>
+									</div>
+									<p class="foodMenu__text">
+										Yogurt with finely chopped dill, garlic and olive oil
+									</p>
+								</li>
+								<li>
+									<div class="foodMenu__name">
+										<h4 class="foodMenu__title">ANTEP EZMESI</h4> &nbsp;
+										<span class="foodMenu__weight">(100g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">85 kč</span>
+									</div>
+									<p class="foodMenu__text">
+										Finely chopped tomatoes, red onion, cucumber, sweet red pepper, hot chilli pepper and garlic with dressing from pomegranate sauce, lemon sauce and olive oil
+									</p>
+								</li>
+								<li>
+									<div class="foodMenu__name">
+										<h4 class="foodMenu__title">CACIK</h4> &nbsp;
+										<span class="foodMenu__weight">(250g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">95 kč</span>
+									</div>
+									<p class="foodMenu__text">
+										Yogurt with finely chopped cucumbers, garlic and olive oil
+									</p>
+								</li>
+								<li>
+									<div class="foodMenu__name">
+										<h4 class="foodMenu__title">KariŞik SalaT </h4> &nbsp;
+										<span class="foodMenu__weight">(250g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">130 kč</span>
+									</div>
+									<p class="foodMenu__text">
+										Sliced lettuce, sweet pepper, cucumber, cherry tomato, mint and arugula with dressing from pomegranate sauce and olive oil, with pomegranate grapes and sliced walnut
+									</p>
+								</li>
+							</ul>
+						</li>
+						<li class="food__item">
+							<ul class="foodMenu">
+								<li>
+									<div class="foodMenu__name">
+										<h4 class="foodMenu__title">IÇLI KÖFTE</h4> &nbsp;
+										<span class="foodMenu__weight">(70g) - 1pc</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">60 kč</span>
+									</div>
+									<p class="foodMenu__text">
+										Stuffed meatballs, fine cracked wheat, onion, beef, wallnut, spice
+									</p>
+								</li>
+								<li>
+									<div class="foodMenu__name">
+										<h4 class="foodMenu__title">Çoban salat </h4> &nbsp;
+										<span class="foodMenu__weight">(200g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">120 kč</span>
+									</div>
+									<p class="foodMenu__text">
+										Sliced cucumber, tomato, sweet pepper and walnut with dressing from pomegranate sauce and lemon sauce
+									</p>
+								</li>
+								<li>
+									<div class="foodMenu__name">
+										<h4 class="foodMenu__title">peynirli salat</h4> &nbsp;
+										<span class="foodMenu__weight">(200g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">120 kč</span>
+									</div>
+									<p class="foodMenu__text">
+										Sliced cucumbers, tomatoes, red sweet pepper, red onion, balkan cheese and olives
+									</p>
+								</li>
+								<li>
+									<div class="foodMenu__name">
+										<h4 class="foodMenu__title">Karisik meze tabagi</h4> &nbsp;
+										<span class="foodMenu__weight">(350g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">320 kč</span>
+									</div>
+									<p class="foodMenu__text">
+										Selection of hummus, shakshouka, kisir, haydari, antep ezmesi, patlican salad, balkan cheese
+									</p>
+								</li>
+								<li>
+									<div class="foodMenu__name">
+										<h4 class="foodMenu__title">Patlican Salat</h4> &nbsp;
+										<span class="foodMenu__weight">(100g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">125 kč</span>
+									</div>
+									<p class="foodMenu__text">
+										Mixture of eggplant, tomato and sweet red pepper grilled with garlic and dill spice with dressing from lemon sauce and olive oil
+									</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="food__list food__list--main food__list--active">
+						<li class="food__item">
+							<ul class="foodMenu">
+								<li>
+									<div class="foodMenu__name">
+										<h4 class="foodMenu__title">Adana Kebab</h4> &nbsp;
+										<span class="foodMenu__weight">(160g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">260 kč</span>
 									</div>
 									<p class="foodMenu__text">
 										Grilled sliced minced lamb meat served with chopped tomatos, green pepper and pita bread, softend butter
@@ -129,62 +312,76 @@
 								</li>
 								<li>
 									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">ADANA KEBAB (160g)</h4>
-										<span class="foodMenu__price">260 kc</span>
+										<h4 class="foodMenu__title">Urfa Kebab</h4> &nbsp;
+										<span class="foodMenu__weight">(170g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">260 kč</span>
 									</div>
 									<p class="foodMenu__text">
-										Grilled sliced minced lamb meat served with chopped tomatos, green pepper and pita bread, softend butter
+										Grilled skewered minced lamb meat, served with grilled tomatoes and sweet pepper, bulgur, and pita bread
 									</p>
 								</li>
 								<li>
 									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">ADANA KEBAB (160g)</h4>
-										<span class="foodMenu__price">260 kc</span>
+										<h4 class="foodMenu__title">Beyti Kebab</h4> &nbsp;
+										<span class="foodMenu__weight">(170g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">260 kč</span>
 									</div>
 									<p class="foodMenu__text">
-										Grilled sliced minced lamb meat served with chopped tomatos, green pepper and pita bread, softend butter
+										Grilled skewered minced lamb meat with hot spices, parsley and garlic served with grilled tomatoes and green pepper, bulgur and pita bread
 									</p>
 								</li>
 								<li>
 									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">ADANA KEBAB (160g)</h4>
-										<span class="foodMenu__price">260 kc</span>
+										<h4 class="foodMenu__title">Kuzu ŞiŞ Kebab</h4> &nbsp;
+										<span class="foodMenu__weight">(200g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">325 kč</span>
 									</div>
 									<p class="foodMenu__text">
-										Grilled sliced minced lamb meat served with chopped tomatos, green pepper and pita bread, softend butter
+										Grilled skewered lamb rump, served with grilled tomatoes and green pepper, bulgur and pita bread
 									</p>
 								</li>
 								<li>
 									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">ADANA KEBAB (160g)</h4>
-										<span class="foodMenu__price">260 kc</span>
+										<h4 class="foodMenu__title">TAVUK ŞiŞ KEBAB</h4> &nbsp;
+										<span class="foodMenu__weight">(200g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">245 kč</span>
 									</div>
 									<p class="foodMenu__text">
-										Grilled sliced minced lamb meat served with chopped tomatos, green pepper and pita bread, softend butter
+										Grilled skewered chicken breast, served with grilled tomatoes and green pepper, bulgur and pita bread
 									</p>
 								</li>
 								<li>
 									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">ADANA KEBAB (160g)</h4>
-										<span class="foodMenu__price">260 kc</span>
+										<h4 class="foodMenu__title">Ali nazik kebab</h4> &nbsp;
+										<span class="foodMenu__weight">(160g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">345 kč</span>
 									</div>
 									<p class="foodMenu__text">
-										Grilled sliced minced lamb meat served with chopped tomatos, green pepper and pita bread, softend butter
+										Grilled minced lamb meat served on pita bread with finely chopped grilled tomato, green pepper and eggplant, yogurt sauce with garlic and heated olive oil
 									</p>
 								</li>
 								<li>
 									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">ADANA KEBAB (160g)</h4>
-										<span class="foodMenu__price">260 kc</span>
+										<h4 class="foodMenu__title">Yogurtlu Kebab</h4> &nbsp;
+										<span class="foodMenu__weight">(160g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">345 kč</span>
 									</div>
 									<p class="foodMenu__text">
-										Grilled sliced minced lamb meat served with chopped tomatos, green pepper and pita bread, softend butter
+										Grilled skewered minced lamb meat, served on homemade bread baked on butterwithsauce from red chilli pepper, with yogurt and garlic, decorated with grilled tomato and green pepper
 									</p>
 								</li>
 								<li>
 									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">ADANA KEBAB (160g)</h4>
-										<span class="foodMenu__price">260 kc</span>
+										<h4 class="foodMenu__title">Alti ezmeli Kebab</h4> &nbsp;
+										<span class="foodMenu__weight">(200g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">345 kč</span>
 									</div>
 									<p class="foodMenu__text">
 										Grilled sliced minced lamb meat served with chopped tomatos, green pepper and pita bread, softend butter
@@ -196,80 +393,88 @@
 							<ul class="foodMenu">
 								<li>
 									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">ADANA KEBAB (160g)</h4>
-										<span class="foodMenu__price">260 kc</span>
+										<h4 class="foodMenu__title">KulBasti</h4> &nbsp;
+										<span class="foodMenu__weight">(220g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">490 kč</span>
 									</div>
 									<p class="foodMenu__text">
-										Grilled sliced minced lamb meat served with chopped tomatos, green pepper and pita bread, softend butter
+										Grilled skewered beef sirloin marinated in olive oil, vinegar, onion and basil, served with grilled tomatoes and green pepper, bulgur and pita bread
 									</p>
 								</li>
 								<li>
 									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">ADANA KEBAB (160g)</h4>
-										<span class="foodMenu__price">260 kc</span>
+										<h4 class="foodMenu__title">Sarma beyti</h4> &nbsp;
+										<span class="foodMenu__weight">(200g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">395 kč</span>
 									</div>
 									<p class="foodMenu__text">
-										Grilled sliced minced lamb meat served with chopped tomatos, green pepper and pita bread, softend butter
+										Grilled skewered minced lamb meat with garlic rolled in homemade flatbread, served with sauce from fried red chilli pepper, yogurt, garlic, decorated with grilled tomato and green pepper
 									</p>
 								</li>
 								<li>
 									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">ADANA KEBAB (160g)</h4>
-										<span class="foodMenu__price">260 kc</span>
+										<h4 class="foodMenu__title">ATavuk ĞÖĞÜS izgara</h4> &nbsp;
+										<span class="foodMenu__weight">(220g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">245 kč</span>
 									</div>
 									<p class="foodMenu__text">
-										Grilled sliced minced lamb meat served with chopped tomatos, green pepper and pita bread, softend butter
+										Grilled chicken steak marinated in olive oil, chilli peppers and thyme, served with grilled tomatoes and green pepper, bulgur and pita bread
 									</p>
 								</li>
 								<li>
 									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">ADANA KEBAB (160g)</h4>
-										<span class="foodMenu__price">260 kc</span>
+										<h4 class="foodMenu__title">KÖfte izgara</h4> &nbsp;
+										<span class="foodMenu__weight">(200g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">245 kč</span>
 									</div>
 									<p class="foodMenu__text">
-										Grilled sliced minced lamb meat served with chopped tomatos, green pepper and pita bread, softend butter
+										Grilled mixed minced lamb and beef meat, served with grilled tomatoes and green pepper, bulgur and pita bread
 									</p>
 								</li>
 								<li>
 									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">ADANA KEBAB (160g)</h4>
-										<span class="foodMenu__price">260 kc</span>
+										<h4 class="foodMenu__title"> Pirzola izgara</h4> &nbsp;
+										<span class="foodMenu__weight">(250g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">495 kč</span>
 									</div>
 									<p class="foodMenu__text">
-										Grilled sliced minced lamb meat served with chopped tomatos, green pepper and pita bread, softend butter
+										Grilled lamb chop marinated in olive oil, salt and black pepper, served with grilled tomatoes and green pepper, bulgur and pita bread
 									</p>
 								</li>
 								<li>
 									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">ADANA KEBAB (160g)</h4>
-										<span class="foodMenu__price">260 kc</span>
+										<h4 class="foodMenu__title">TAVUK KANAT</h4> &nbsp;
+										<span class="foodMenu__weight">(200g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">230 kč</span>
 									</div>
 									<p class="foodMenu__text">
-										Grilled sliced minced lamb meat served with chopped tomatos, green pepper and pita bread, softend butter
+										Grilled chicken wings marinated in olive oil, chilli pepper and thyme, served with grilled tomatoes and green pepper, bulgur and pita bread
 									</p>
 								</li>
 								<li>
 									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">ADANA KEBAB (160g)</h4>
-										<span class="foodMenu__price">260 kc</span>
+										<h4 class="foodMenu__title">KariŞik Kebab</h4> &nbsp;
+										<span class="foodMenu__weight">(250g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">350 kč</span>
 									</div>
 									<p class="foodMenu__text">
-										Grilled sliced minced lamb meat served with chopped tomatos, green pepper and pita bread, softend butter
+										Selection of kuzu kebab, adana kebab, tavuk kebab (each of 1/2 portion), served with grilled tomatoes and green pepper, bulgur and pita bread
 									</p>
 								</li>
 								<li>
 									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">ADANA KEBAB (160g)</h4>
-										<span class="foodMenu__price">260 kc</span>
-									</div>
-									<p class="foodMenu__text">
-										Grilled sliced minced lamb meat served with chopped tomatos, green pepper and pita bread, softend butter
-									</p>
-								</li>
-								<li>
-									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">ADANA KEBAB (160g)</h4>
-										<span class="foodMenu__price">260 kc</span>
+										<h4 class="foodMenu__title">MIx grill</h4> &nbsp;
+										<span class="color--gold">for 2-4 persons</span> &nbsp;
+										<span class="foodMenu__weight">(1200g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">345kč</span>
 									</div>
 									<p class="foodMenu__text">
 										Grilled sliced minced lamb meat served with chopped tomatos, green pepper and pita bread, softend butter
@@ -278,38 +483,348 @@
 							</ul>
 						</li>
 					</ul>
+					<ul class="food__list food__list--specialitites">
+						<li class="food__item">
+							<ul class="foodMenu">
+								<li>
+									<div class="foodMenu__name">
+										<h4 class="foodMenu__title">Kiymali Pide</h4> &nbsp;
+										<span class="foodMenu__weight">(120g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">175 kč</span>
+									</div>
+									<p class="foodMenu__text">
+										Homemade flatbread, baked with minced lamb and beef meat, finely chopped tomatoes and sweet pepper
+									</p>
+								</li>
+								<li>
+									<div class="foodMenu__name">
+										<h4 class="foodMenu__title">KaŞarli Pide</h4> &nbsp;
+										<span class="foodMenu__weight">(120g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">165 kč</span>
+									</div>
+									<p class="foodMenu__text">
+										Homemade flatbread, baked with cheese and tomatoes
+									</p>
+								</li>
+								<li>
+									<div class="foodMenu__name">
+										<h4 class="foodMenu__title">KaŞali Sujuklu Pide</h4> &nbsp;
+										<span class="foodMenu__weight">(120g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">175 kč</span>
+									</div>
+									<p class="foodMenu__text">
+										Homemade flatbread, baked with cheese, tomatoes sujuk sausage
+									</p>
+								</li>
+								<li>
+									<div class="foodMenu__name">
+										<h4 class="foodMenu__title">Lachmacun</h4> &nbsp;
+										<span class="foodMenu__weight">(80g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">100 kč</span>
+									</div>
+									<p class="foodMenu__text">
+										Homemade flatbread, baked with minced lamb and beef meat, served with tomato lettuce and lemon
+									</p>
+								</li>
+								<li>
+									<div class="foodMenu__name">
+										<h4 class="foodMenu__title">Manti</h4> &nbsp;
+										<span class="foodMenu__weight">(220g)</span>
+										<div class="separator"></div>
+										<span class="foodMenu__price">160 kč</span>
+									</div>
+									<p class="foodMenu__text">
+										Dumplings filled with minced spiced beef meat with yogurt topped with butter
+									</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="food__list food__list--dishes">
+						<li class="food__item">
+							<ul class="foodMenu">
+								<li>
+									<div class="foodMenu__name">
+										<h4 class="foodMenu__title">pita bread</h4> &nbsp;
+										<div class="separator"></div>
+										<span class="foodMenu__price">25 kč</span>
+									</div>
+								</li>
+								<li>
+									<div class="foodMenu__name">
+										<h4 class="foodMenu__title">Fries</h4> &nbsp;
+										<div class="separator"></div>
+										<span class="foodMenu__price">45 kč</span>
+									</div>
+								</li>
+								<li>
+									<div class="foodMenu__name">
+										<h4 class="foodMenu__title">tortilla </h4> &nbsp;
+										<div class="separator"></div>
+										<span class="foodMenu__price">45 kč</span>
+									</div>
+								</li>
+								<li>
+									<div class="foodMenu__name">
+										<h4 class="foodMenu__title">grilled vegetables</h4> &nbsp;
+										<div class="separator"></div>
+										<span class="foodMenu__price">130 kč</span>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="food__list food__list--deserts">
+						<li class="food__item">
+							<ul class="foodMenu">
+								<li>
+									<div class="foodMenu__name">
+										<h4 class="foodMenu__title">Turkish Baklava</h4> &nbsp;
+										<div class="separator"></div>
+										<span class="foodMenu__price">60kč</span>
+									</div>
+								</li>
+								<li>
+									<div class="foodMenu__name">
+										<h4 class="foodMenu__title">SÜtlaÇ</h4> &nbsp;
+										<div class="separator"></div>
+										<span class="foodMenu__price">95 kč</span>
+									</div>
+								</li>
+								<li>
+									<div class="foodMenu__name">
+										<h4 class="foodMenu__title">KÜnefe </h4> &nbsp;
+										<div class="separator"></div>
+										<span class="foodMenu__price">140 kč</span>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="drinks">
+	<section class="drinks" id="drinks">
 		<div class="container">
 			<h2 class="title drinks__title">Our Drinks</h2>
 			<div class="drinks__nav">
-				<button class="button drinks__button">Hot drinks</button>
-				<button class="button drinks__button">Softs drinks</button>
-				<button class="button button--active drinks__button">Wine list</button>
-				<button class="button drinks__button">Beer</button>
-				<button class="button drinks__button">Spirits</button>
+				<button class="button drinks__button" data-list="hot">Hot drinks</button>
+				<button class="button drinks__button" data-list="soft">Softs drinks</button>
+				<button class="button button--active drinks__button" data-list="wine">Wine list</button>
+				<button class="button drinks__button" data-list="beer">Beer</button>
+				<button class="button drinks__button" data-list="spirits">Spirits</button>
 			</div>
 			<div class="drinks__menu">
-				<ul class="drinks__list">
+				<ul class="drinks__list drinks__list--hot">
 					<li class="drinks__item">
-						<ul class="drinksMenu drinksMenu--wine">
-							<!-- <li>
-								<div class="drinksMenu__dosage"></div>
+						<ul class="drinksMenu">
+							<li>
+								<h4 class="drinksMenu__title">Hot drinks</h4>
 								<div class="drinksMenu__option">
-									<h4 class="drinksMenu__title"></h4>
-									<p class="drinksMenu__name">
-
-										<span class="drinksMenu__price"></span>
-									</p>
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Espresso
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">55 kč</span>
+									</div>
 								</div>
-							</li> -->
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Espresso Lungo
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">55 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Espresso Doppio
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">95 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Espresso Macchiato
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">65 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Cappuccino
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">65 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Caffe Latte
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">65 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Turkish Coffe
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">60 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Turkish Tea
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">45 kč</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="drinks__list drinks__list--soft">
+					<li class="drinks__item">
+						<ul class="drinksMenu">
+							<li>
+								<h4 class="drinksMenu__title">Soft drinks</h4>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Ayran (0,2l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">55 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Pepsi Cola (0,25l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">55 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Pepsi Cola Light (0,25l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">55 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											7Up (0,25l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">55 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Mirinda (0,25l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">55 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Evervess Tonic, Ginger Ale, (0,25l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">55 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Lipton Ice Tea - By offer (0,25l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">55 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Toma Natura (still/sparkling) (0,25)l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">45 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Vitell (1l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">120 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Perrier Mineralle (sparkling) (0,70l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">90 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Fresh Orange Juice (0,2l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">70 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Tropicana Juice (0,2l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">55 kč</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="drinks__list drinks__list--wine drinks__list--active">
+					<li class="drinks__item">
+						<ul class="drinksMenu">
 							<li>
 								<div class="drinksMenu__dosage">0,15l / 0,75l</div>
+								<h4 class="drinksMenu__title">White wine / Bílé víno</h4>
 								<div class="drinksMenu__option">
-									<h4 class="drinksMenu__title">White wine / Bílé víno</h4>
 									<div class="drinksMenu__text">
 										<p class="drinksMenu__name">
 											Chardonay Jakostní - dry, Habánské sklepy, CZ
@@ -318,8 +833,10 @@
 										<span class="drinksMenu__price">80 / 390 kč</span>
 									</div>
 								</div>
+							</li>
+							<li>
+								<h4 class="drinksMenu__title">Red wine / Červená vína</h4>
 								<div class="drinksMenu__option">
-									<h4 class="drinksMenu__title">Red wine / Červená vína</h4>
 									<div class="drinksMenu__text">
 										<p class="drinksMenu__name">
 											Rulandské modré, Jakostní - dry, Habánské sklepy, CZ
@@ -328,8 +845,10 @@
 										<span class="drinksMenu__price">80 / 390 kč</span>
 									</div>
 								</div>
+							</li>
+							<li>
+								<h4 class="drinksMenu__title">Rose wine / Růžová vína</h4>
 								<div class="drinksMenu__option">
-									<h4 class="drinksMenu__title">Rose wine / Růžová vína</h4>
 									<div class="drinksMenu__text">
 										<p class="drinksMenu__name">
 											Zweigeltrebe, Jakostní - dry, Habánské sklepy, CZ
@@ -341,8 +860,8 @@
 							</li>
 							<li>
 								<div class="drinksMenu__dosage">0,75l</div>
+								<h4 class="drinksMenu__title">Sparkling wine and champagne</h4>
 								<div class="drinksMenu__option">
-									<h4 class="drinksMenu__title">Sparkling wine and champagne</h4>
 									<div class="drinksMenu__text">
 										<p class="drinksMenu__name">
 											Bohemia Sekt (Brut, Demi Sec), CZ
@@ -355,32 +874,336 @@
 						</ul>
 					</li>
 				</ul>
+				<ul class="drinks__list drinks__list--beer">
+					<li class="drinks__item">
+						<ul class="drinksMenu">
+							<li>
+								<h4 class="drinksMenu__title">Beer</h4>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Pilesner Urquel (0,3l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">60 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Heineken (0,33l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">65 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Radegast Birel (0,5l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">55 kč</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="drinks__list drinks__list--spirits">
+					<li class="drinks__item">
+						<ul class="drinksMenu">
+							<li>
+								<h4 class="drinksMenu__title">Liquors and Destilates</h4>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Martini (0,1l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">90 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Campari (0,04l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">70 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Aperol (0,04l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">70 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Jagermaster (0,04l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">70 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Becherovka (0,04l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">70 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Yeni Raki (0,04l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">80 kč</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<h4 class="drinksMenu__title">Vodka</h4>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Absolute (0,04l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">70 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Finlandia (0,04l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">70 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Russian standart (0,04l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">70 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Belvedere (0,04l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">120 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Beluga (0,04l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">120 kč</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<h4 class="drinksMenu__title">Gin</h4>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Bombay Sapphire (0,04l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">90 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Hendricks (0,04l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">70 kč</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="drinks__item">
+						<ul class="drinksMenu">
+							<li>
+								<h4 class="drinksMenu__title">Brandy - Cognac</h4>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Metaxa 5 star (0,04l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">90 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Hennesy VS (0,04l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">70 kč</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<h4 class="drinksMenu__title">Whisky</h4>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Johny Walker (0,04l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">70 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Chivas Regal (0,04l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">70 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Jack Daniels (0,04l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">70 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Jameson (0,04l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">120 kč</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<h4 class="drinksMenu__title">Rum</h4>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Captain Morgan Spiced (0,04l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">70 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Havana Club (0,04l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">70 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Diplomatico Rezerva Exclusive (0,04l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">120 kč</span>
+									</div>
+								</div>
+								<div class="drinksMenu__option">
+									<div class="drinksMenu__text">
+										<p class="drinksMenu__name">
+											Zacapa 23 (0,04l)
+										</p>
+										<div class="separator"></div>
+										<span class="drinksMenu__price">150 kč</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</section>
-	<section class="gallery">
+	<section class="gallery" id="gallery">
 		<h2 class="title gallery__title">
 			Gallery
 		</h2>
 		<div class="gallerySlider">
 			<div class="gallerySlider__item">
-				<img src="img/gallery-1.jpg" alt="Item-1">
+				<div class="gallerySlider__img">
+					<img src="img/slider-5.jpg" alt="Item-1">
+				</div>
 			</div>
 			<div class="gallerySlider__item">
-				<img src="img/gallery-2.jpg" alt="Item-1">
-			</div>
-			<div class="gallerySlider__item gallerySlider__item--active">
-				<img src="img/gallery-1.jpg" alt="Item-1">
-			</div>
-			<div class="gallerySlider__item">
-				<img src="img/gallery-3.jpg" alt="Item-1">
+				<div class="gallerySlider__img">
+					<img src="img/slider-2.jpg" alt="Item-1">
+				</div>
 			</div>
 			<div class="gallerySlider__item">
-				<img src="img/gallery-2.jpg" alt="Item-1">
+				<div class="gallerySlider__img">
+					<img src="img/slider-1.jpg" alt="Item-1">
+				</div>
+			</div>
+			<div class="gallerySlider__item">
+				<div class="gallerySlider__img">
+					<img src="img/slider-3.jpg" alt="Item-1">
+				</div>
+			</div>
+			<div class="gallerySlider__item">
+				<div class="gallerySlider__img">
+					<img src="img/slider-5.jpg" alt="Item-1">
+				</div>
+			</div>
+			<div class="gallerySlider__item">
+				<div class="gallerySlider__img">
+					<img src="img/slider-4.jpg" alt="Item-1">
+				</div>
+			</div>
+			<div class="gallerySlider__item">
+				<div class="gallerySlider__img">
+					<img src="img/slider-1.jpg" alt="Item-1">
+				</div>
+			</div>
+			<div class="gallerySlider__item">
+				<div class="gallerySlider__img">
+					<img src="img/slider-2.jpg" alt="Item-1">
+				</div>
 			</div>
 		</div>
+		<div class="gallerySlider__nav">
+			<button class="gallerySlider__button gallerySlider__button--prev">
+				<img src="img/button-arrow.svg" alt="Previous">
+			</button>
+			<button class="gallerySlider__button gallerySlider__button--next">
+				<img src="img/button-arrow.svg" alt="Next">
+			</button>
+		</div>
 	</section>
-	<section class="contacts">
+	<section class="contacts" id="contacts">
 		<div class="container">
 			<h2 class="title contacts__title">
 				Come and see us!
@@ -395,7 +1218,54 @@
 				<p>You can reach us at:</p>
 				<a href="tel:+420222210382">+420 222 210 382</a>
 			</div>
+			<div class="contacts__wrapper">
+				<div class="contacts__map">
+					<img src="img/contacts-map.jpg" alt="Mangal location">
+				</div>
+				<div class="contacts__info">
+					<h3>Mangal Restaurant</h3>
+					<address class="contacts__address">
+						<p>Václavské nám. 807,</p>
+						<p>110 00 Nové Město</p>
+						<p>Praha 1</p>
+						<p>Tel.: <a href="tel:+420222210382">+420 222 210 382</a></p>
+						<p>Email: <a href="mailto:info@mangalrestaurant.cz">info@mangalrestaurant.cz</a></p>
+					</address>
+					<div class="contacts__links">
+						<a class="contacts__link" href="#">Show in Google Maps</a>
+						<div class="links">
+							<a href="#">
+								<img src="img/facebook.svg" alt="Facebook Page">
+							</a>
+							<a href="#">
+								<img src="img/instagram.svg" alt="Instagram Page">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__wrapper">
+				<div class="footer__logo">
+					<img src="img/footer-logo.png" alt="Mangal logo">
+				</div>
+				<div class="footer__nav">
+					<a href="#about">About Us</a>
+					<a href="#food">Our Food</a>
+					<a href="#drinks">Our Drinks</a>
+					<a href="#gallery">Gallery</a>
+					<a href="#contacts">Contacts</a>
+					<a href="#">Nursun international s.r.o.</a>
+				</div>
+				<a href="#" class="footer__share">
+					<img src="img/share.svg" alt="Share">
+				</a>
+			</div>
+		</div>
+	</footer>
+	<script src="js/all.js"></script>
 </body>
 </html>

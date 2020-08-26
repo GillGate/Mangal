@@ -4,10 +4,18 @@
 
 	&__wrapper {
 		margin: 0 auto;
+		display: flex;
+		flex-basis: 100%;
+		max-width: 725px;
+		justify-content: space-between;
 	}
 
 	&__link {
-		margin: 0 60px;
+		transition: color .4s ease;
+
+		&:hover {
+			color: @gold-headerSlider;
+		}
 	}
 
 	&__lang {
@@ -16,13 +24,33 @@
 
 	&__burger {
 		width: 60px;
-		height: 18px;
+		cursor: pointer;
 
-		&::before {
+
+		&::before,
+		&::after {
 			content: '';
 			display: block;
-			width: 100%;
 			height: 3px;
+			background-color: @gold-headerSlider;
+			transition: width .4s ease;
+		}
+
+		&::before {
+			width: 100%;
+		}
+
+		&::after {
+			margin-top: 12px;
+			text-align: right;
+			width: 70%;
+			margin-left: auto;
+		}
+
+		&:hover {
+			&::after {
+				width: 100%;
+			}
 		}
 	}
 }

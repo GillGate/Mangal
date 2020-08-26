@@ -1,8 +1,33 @@
 .gallery {
 	background: @black url(../img/gallery-bg.jpg);
 	padding-top: 100px;
-	padding-bottom: 172px;
+	padding-bottom: 92px;
 	overflow: hidden;
+	position: relative;
+
+	&::before {
+		content: '';
+		display: block;
+		width: 304px;
+		height: 100%;
+		background: linear-gradient(to right, #000, transparent);
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	&::after {
+		content: '';
+		display: block;
+		width: 304px;
+		height: 100%;
+		background: linear-gradient(to left, #000, transparent);
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 1;
+	}
 
 	&__title {
 		margin-bottom: 100px;
@@ -14,46 +39,82 @@
 	}
 
 	.gallerySlider {
+		width: 1920px;
 		display: flex;
 		align-items: center;
 
 		&__item {
-			width: 360px;
-			margin-left: 18px;
-			margin-right: 18px;
+			// width: 414px !important;
+			width: 360px !important;
+			position: relative;
+			z-index: 1;
+			transition: transform .5s ease;
+			// margin-left: 18px;
+			// margin-right: 18px;
+		}
 
-			&--active {
-				margin-left: 73px;
-				margin-right: 73px;
-				transform: scale(1.24);
-				position: relative;
-				z-index: 1;
+		&__img {
+			
+		}
 
-				&::before {
-					content: '';
-					display: block;
-					width: 327px;
-					height: 327px;
-					background-color: @gold;
-					position: absolute;
-					z-index: -1;
-					top: -36px;
-					left: -36px;
-				}
+		.slick-track {
+			padding: 60px 0;
+			
+		}
 
-				&::after {
-					content: '';
-					display: block;
-					width: 300px;
-					height: 300px;
-					border-right: 6px solid @gold;
-					border-bottom: 6px solid @gold;
-					position: absolute;
-					z-index: -1;
-					bottom: -36px;
-					right: -36px;
-				}
+		.slick-slide {
+			
+		}
 
+		.slick-current {
+			transform: scale(1.24);
+			position: relative;
+			z-index: 2;
+		}
+
+		&__nav {
+			display: flex;
+			justify-content: center;
+			margin: 150px auto 0;
+		}
+
+		&__button {
+			height: 24px;
+			width: 38px;
+			background: transparent;
+			border: none;
+			transform: rotate(-90deg);
+			cursor: pointer;
+
+			&--next {
+				order: 2;
+				transform: rotate(90deg);
+			}
+		}
+
+		&__dots {
+			display: flex;
+			margin: 0 44px;
+
+			.slick-active button{
+				background: @gold-headerSlider;
+			}
+
+			li {
+				margin: 0 6px;
+			}
+			
+
+			button{
+				font-size: 0;
+				width: 13px;
+				height: 13px;
+				border-radius: 50%;
+				background: #fff;
+				border: none;
+				cursor: pointer;
+				outline: none;
+				user-select: none;
 			}
 		}
 	}

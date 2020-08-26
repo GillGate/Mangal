@@ -1,27 +1,11 @@
 .drinksMenu {
+	width: 100%;
 	box-sizing: border-box;
-	padding: 40px 60px;
-	// box-shadow: 0px 0px 20px rgba(205, 173, 114, 0.25);
-	box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.25);
+	padding: 56px 60px;
+	border-left: 6px solid @gold-title;
+	border-right: 6px solid @gold-title;
 	font-size: 16px;
 	line-height: 18px;
-
-	&::before {
-		content: '';
-		display: block;
-	}
-
-	&--wine {
-		padding: 50px;
-		border-left: 6px solid @gold-title;
-		border-right: 6px solid @gold-title;
-		
-		&::before {
-			width: 30px;
-			height: 46px;
-			background-image: url(../img/drinks-wine.svg);
-		}
-	}
 
 	li:not(:last-child) {
 		margin-bottom: 50px;
@@ -37,26 +21,22 @@
 	}
 
 	&__option  {
-		margin-bottom: 48px;
+		margin-bottom: 28px;
 	}
 
 	&__title {
 		font-size: 20px;
 		line-height: 23px;
+		margin-top: 34px;
 		margin-bottom: 20px;
 	}
 
 	&__text {
 		display: flex;
-		align-items: baseline;
 	}
 
 	&__name {
 		font-style: italic;
-		margin-right: 10px;
 	}
 
-	&__price {
-		margin-left: 10px;
-	}
 }

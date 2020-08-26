@@ -1,5 +1,24 @@
 .headerSlider {
-	width: 700px;
+	max-width: 43%;
+	margin-left: auto;
+	margin-right: 140px;
+	position: relative;
+	z-index: 1;
+	filter: drop-shadow(20px 20px 80px #000000);
+
+	&::after {
+		content: 'Pirzola Izgagra';
+		font-weight: bold;
+		font-size: 90px;
+		line-height: 107px;
+		color: #000;
+		text-shadow: white 0 0 5px;
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		right: 0;
+		transform: rotate(-90deg) translate(-50%, 300%);
+	}
 
 	&__caption {
 		display: flex;
@@ -30,44 +49,67 @@
 	}
 
 	&__nav {
-		width: 354px;
 		align-self: center;
+		width: 100%;
+		max-width: 354px;
 	}
 
+
 	&__dots {
+		width: 400px;
+		height: 450px;
 		position: relative;
 	}
 
 	&__dot {
+		width: 150px;
+		height: 345px;
 		position: absolute;
-		bottom: 0;
 		left: 0;
+		bottom: 0;
+		opacity: 0;
+		transition: opacity .5s ease;
 
-		&:first-child {
-			position: relative;
-			z-index: 10;
+		img {
+			height: 345px;
+			object-fit: cover;
 		}
 
-		&:nth-child(2) {
-			left: 25%;
-			bottom: 30px;
-			z-index: 9;
+		&--current {
+			z-index: 4;
+			opacity: 1;
 		}
 
-		&:nth-child(3) {
-			left: 50%;
-			bottom: 60px;
-			z-index: 8;
+		&--second {
+			transform: translate(50%, -10%);
+			z-index: 3;
+			opacity: 0.8;
+			filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+		}
+
+		&--third {
+			transform: translate(100%, -20%);
+			z-index: 2;
+			opacity: 0.6;
+			filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.88));
+		}
+
+		&--fourth {
+			transform: translate(150%, -30%);
+			z-index: 1;
+			opacity: 0.4;
+			filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.88));
 		}
 	}
 
 	&__buttons {
-		margin-top: 56px;
+		margin: 73px 0;
+		transform: translateX(-50px);
 		text-align: right;
-		font-family: Georgia;
 	}
 
 	&__button {
+		font-family: Georgia;
 		background: none;
 		border: none;
 		color: @white;
@@ -75,6 +117,11 @@
 		line-height: 20px;
 		cursor: pointer;
 		position: relative;
+		transition: color .5s ease;
+
+		&:hover {
+			color: @gold-headerSlider;
+		}
 
 		&::after {
 			content: '';
@@ -94,6 +141,7 @@
 
 		&--next {
 			margin-left: 62px;
+			margin-right: 12px;
 
 			&::after {
 				right: -64px;

@@ -5,6 +5,20 @@
 	&__wrapper {
 		max-width: 800px;
 		margin: 0 auto;
+		position: relative;
+		z-index: 1;
+
+		&::before {
+			content: 'M';
+			font-size: 883px;
+			line-height: 580px;
+			font-family: Georgia;
+			color: @grey;
+			opacity: 0.2;
+			position: absolute;
+			z-index: -1;
+			top: 0;
+		}
 	}
 
 	&__img {
@@ -18,7 +32,6 @@
 	}
 
 	&__text {
-
 		p {
 			margin-bottom: 25px;
 			font-size: 18px;
@@ -38,5 +51,9 @@
 	&__food {
 		margin-top: 110px;
 		text-align: center;
+
+		img {
+			// max-height: 520px;
+		}
 	}
 }
