@@ -151,6 +151,7 @@ const js = (done) => {
     let jsArray = [
         'src/js/jquery-3.3.1.min.js',
         'src/js/slick.min.js',
+        'src/js/parallax.min.js',
         'src/js/main.js'
     ];
 

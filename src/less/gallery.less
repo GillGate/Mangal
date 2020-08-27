@@ -39,9 +39,12 @@
 	}
 
 	.gallerySlider {
-		width: 1920px;
-		display: flex;
-		align-items: center;
+		height: 446px;
+
+
+		.slick-track {
+			padding: 45px 0;
+		}
 
 		&__item {
 			// width: 414px !important;
@@ -49,22 +52,8 @@
 			position: relative;
 			z-index: 1;
 			transition: transform .5s ease;
-			// margin-left: 18px;
-			// margin-right: 18px;
 		}
 
-		&__img {
-			
-		}
-
-		.slick-track {
-			padding: 60px 0;
-			
-		}
-
-		.slick-slide {
-			
-		}
 
 		.slick-current {
 			transform: scale(1.24);

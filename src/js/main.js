@@ -120,7 +120,12 @@ $('.headerSlider__button--prev').on('click', function() {
   sliderInitPrev();
 });
 
-
+let nav = $('.nav__wrapper');
+$('.nav__burger').on('click', function() {
+  $(this).toggleClass('nav__burger--open');
+  
+  nav.toggle(300);
+});
 
 
 let foodBtnWrapper = $('.food__nav');
@@ -155,6 +160,56 @@ $links.on('click', function(e) {
   let target = $(this).attr('href');
 
   $('html, body').animate({
-    scrollTop: $(target).offset().top
+    scrollTop: $(target).offset().top - 86
   }, 1000);
+});
+
+let offset = window.pageYOffset;
+
+function checkOffset() {
+  offset = window.pageYOffset;
+  let header = $('.header__head');
+
+
+  if (offset > 650) {
+    $('.header').css('marginTop', '86px');
+    header.addClass('header__head--fixed');
+  } else {
+    $('.header').css('marginTop', '0px');
+    header.removeClass('header__head--fixed');
+  }
+}
+
+checkOffset();
+
+// $('.welcome__food').parallax({
+//   imageSrc: '../img/welcome-food.jpg'
+// });
+
+
+// let windowTop = $(window).scrollTop();
+// let navCoords = [];
+// let navCoordsItem = 0;
+// let navLinks = document.querySelectorAll('.nav__link');
+
+// $('.nav__link').each(function() {
+//   let selector = $(this).attr('href');
+//   let section = $(selector);
+
+//  navCoords[navCoordsItem] = section.offset().top;
+
+//  navCoordsItem++;
+// });
+
+$(window).on('scroll', function() {
+  checkOffset();
+
+  // for(let i = 0; i < navLinks.length; i++) {
+  //   let navLink = navLinks[i].getAttribute('href');
+
+  //   if (windowsTop > navCoords[i]) {
+      
+  //   }
+
+  // }
 });
