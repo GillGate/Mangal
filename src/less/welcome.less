@@ -3,6 +3,11 @@
 	padding-bottom: 110px;
 	background-color: @cream;
 
+	.md-block({
+		padding-top: 60px;
+		padding-bottom: 50px;
+	});
+
 	&__wrapper {
 		max-width: 800px;
 		margin: 0 auto;
@@ -12,7 +17,7 @@
 		&::before {
 			content: 'M';
 			font-size: 883px;
-			line-height: 580px;
+			line-height: 612px;
 			font-family: Georgia;
 			color: @grey;
 			opacity: 0.2;
@@ -20,22 +25,98 @@
 			z-index: -1;
 			top: 0;
 		}
+
+		.md-block({
+			max-width: 640px;
+
+			&::before {
+				font-size: 706px;
+				line-height: 488px;
+			}
+		});
+
+		.sm-block({
+			max-width: 464px;
+
+			&::before {
+			    font-size: 512px;
+    			line-height: 356px;
+			}
+		});
+
+		.msm-block({
+			max-width: 300px;
+
+			&::before {
+			    font-size: 324px;
+    			line-height: 232px;
+			}
+		});
 	}
 
 	&__img {
-		padding: 35px 0 55px;
+		padding: 70px 0;
+		text-align: center;
+
+		img {
+			width: 700px;
+		}
+
+		.md-block({
+			padding: 55px 0;
+			
+			img {
+				width: 580px;
+			}
+		});
+
+		.sm-block({
+			padding: 35px 0;
+
+			img {
+				width: 410px;
+			}
+		});
+
+		.msm-block({
+			img {
+				width: 280px;
+			}
+		});
 	}
 
 	&__title {
 		&::after {
 			width: 168px;
 		}
+
+		.msm-block({
+			margin-top: 50px;
+		});	
 	}
 
 	&__text {
+		font-size: 18px;
+
+		.md-block({
+			font-size: 16px;
+			padding-left: 25px;
+			
+			p {
+				line-height: 18px;
+			}
+		});
+
+		.sm-block({
+			margin-top: 58px;
+		});
+
+		.msm-block({
+			padding-left: 0;
+		});
+
 		p {
 			margin-bottom: 25px;
-			font-size: 18px;
 			line-height: 20px;
 		}
 

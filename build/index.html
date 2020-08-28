@@ -122,8 +122,8 @@
 							</div>
 						</div>
 						<div class="headerSlider__buttons">
-							<button class="headerSlider__button headerSlider__button--prev">Prev</button>
-							<button class="headerSlider__button headerSlider__button--next">Next</button>
+							<button class="slider__button slider__button--prev headerSlider__button headerSlider__button--prev">Prev</button>
+							<button class="slider__button slider__button--next headerSlider__button headerSlider__button--next">Next</button>
 						</div>
 						<a href="#about" class="header__scroll">
 							Scroll down
@@ -169,8 +169,8 @@
 					<button class="button food__button" data-list="deserts">Desserts</button>
 				</div>
 				<div class="food__menu">
-					<ul class="food__list food__list--salads">
-						<li class="food__item">
+					<div class="scrollbar-inner">
+						<div class="food__list food__list--salads">
 							<ul class="foodMenu">
 								<li>
 									<div class="foodMenu__name">
@@ -238,10 +238,6 @@
 										Sliced lettuce, sweet pepper, cucumber, cherry tomato, mint and arugula with dressing from pomegranate sauce and olive oil, with pomegranate grapes and sliced walnut
 									</p>
 								</li>
-							</ul>
-						</li>
-						<li class="food__item">
-							<ul class="foodMenu">
 								<li>
 									<div class="foodMenu__name">
 										<h4 class="foodMenu__title">IÇLI KÖFTE</h4> &nbsp;
@@ -298,10 +294,10 @@
 									</p>
 								</li>
 							</ul>
-						</li>
-					</ul>
-					<ul class="food__list food__list--main food__list--active">
-						<li class="food__item">
+						</div>
+					</div>
+					<div class="scrollbar-inner">
+						<div class="food__list food__list--main food__list--active">
 							<ul class="foodMenu">
 								<li>
 									<div class="foodMenu__name">
@@ -391,10 +387,6 @@
 										Grilled sliced minced lamb meat served with chopped tomatos, green pepper and pita bread, softend butter
 									</p>
 								</li>
-							</ul>
-						</li>
-						<li class="food__item">
-							<ul class="foodMenu">
 								<li>
 									<div class="foodMenu__name">
 										<h4 class="foodMenu__title">KulBasti</h4> &nbsp;
@@ -485,130 +477,129 @@
 									</p>
 								</li>
 							</ul>
-						</li>
-					</ul>
-					<ul class="food__list food__list--specialitites">
-						<li class="food__item">
-							<ul class="foodMenu">
-								<li>
-									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">Kiymali Pide</h4> &nbsp;
-										<span class="foodMenu__weight">(120g)</span>
-										<div class="separator"></div>
-										<span class="foodMenu__price">175 kč</span>
-									</div>
-									<p class="foodMenu__text">
-										Homemade flatbread, baked with minced lamb and beef meat, finely chopped tomatoes and sweet pepper
-									</p>
-								</li>
-								<li>
-									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">KaŞarli Pide</h4> &nbsp;
-										<span class="foodMenu__weight">(120g)</span>
-										<div class="separator"></div>
-										<span class="foodMenu__price">165 kč</span>
-									</div>
-									<p class="foodMenu__text">
-										Homemade flatbread, baked with cheese and tomatoes
-									</p>
-								</li>
-								<li>
-									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">KaŞali Sujuklu Pide</h4> &nbsp;
-										<span class="foodMenu__weight">(120g)</span>
-										<div class="separator"></div>
-										<span class="foodMenu__price">175 kč</span>
-									</div>
-									<p class="foodMenu__text">
-										Homemade flatbread, baked with cheese, tomatoes sujuk sausage
-									</p>
-								</li>
-								<li>
-									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">Lachmacun</h4> &nbsp;
-										<span class="foodMenu__weight">(80g)</span>
-										<div class="separator"></div>
-										<span class="foodMenu__price">100 kč</span>
-									</div>
-									<p class="foodMenu__text">
-										Homemade flatbread, baked with minced lamb and beef meat, served with tomato lettuce and lemon
-									</p>
-								</li>
-								<li>
-									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">Manti</h4> &nbsp;
-										<span class="foodMenu__weight">(220g)</span>
-										<div class="separator"></div>
-										<span class="foodMenu__price">160 kč</span>
-									</div>
-									<p class="foodMenu__text">
-										Dumplings filled with minced spiced beef meat with yogurt topped with butter
-									</p>
-								</li>
-							</ul>
-						</li>
-					</ul>
-					<ul class="food__list food__list--dishes">
-						<li class="food__item">
-							<ul class="foodMenu">
-								<li>
-									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">pita bread</h4> &nbsp;
-										<div class="separator"></div>
-										<span class="foodMenu__price">25 kč</span>
-									</div>
-								</li>
-								<li>
-									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">Fries</h4> &nbsp;
-										<div class="separator"></div>
-										<span class="foodMenu__price">45 kč</span>
-									</div>
-								</li>
-								<li>
-									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">tortilla </h4> &nbsp;
-										<div class="separator"></div>
-										<span class="foodMenu__price">45 kč</span>
-									</div>
-								</li>
-								<li>
-									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">grilled vegetables</h4> &nbsp;
-										<div class="separator"></div>
-										<span class="foodMenu__price">130 kč</span>
-									</div>
-								</li>
-							</ul>
-						</li>
-					</ul>
-					<ul class="food__list food__list--deserts">
-						<li class="food__item">
-							<ul class="foodMenu">
-								<li>
-									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">Turkish Baklava</h4> &nbsp;
-										<div class="separator"></div>
-										<span class="foodMenu__price">60kč</span>
-									</div>
-								</li>
-								<li>
-									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">SÜtlaÇ</h4> &nbsp;
-										<div class="separator"></div>
-										<span class="foodMenu__price">95 kč</span>
-									</div>
-								</li>
-								<li>
-									<div class="foodMenu__name">
-										<h4 class="foodMenu__title">KÜnefe </h4> &nbsp;
-										<div class="separator"></div>
-										<span class="foodMenu__price">140 kč</span>
-									</div>
-								</li>
-							</ul>
-						</li>
-					</ul>
+						</div>
+					</div>
+					<div class="food__list food__list--specialitites">
+						<ul class="foodMenu">
+							<li>
+								<div class="foodMenu__name">
+									<h4 class="foodMenu__title">Kiymali Pide</h4> &nbsp;
+									<span class="foodMenu__weight">(120g)</span>
+									<div class="separator"></div>
+									<span class="foodMenu__price">175 kč</span>
+								</div>
+								<p class="foodMenu__text">
+									Homemade flatbread, baked with minced lamb and beef meat, finely chopped tomatoes and sweet pepper
+								</p>
+							</li>
+							<li>
+								<div class="foodMenu__name">
+									<h4 class="foodMenu__title">KaŞarli Pide</h4> &nbsp;
+									<span class="foodMenu__weight">(120g)</span>
+									<div class="separator"></div>
+									<span class="foodMenu__price">165 kč</span>
+								</div>
+								<p class="foodMenu__text">
+									Homemade flatbread, baked with cheese and tomatoes
+								</p>
+							</li>
+							<li>
+								<div class="foodMenu__name">
+									<h4 class="foodMenu__title">KaŞali Sujuklu Pide</h4> &nbsp;
+									<span class="foodMenu__weight">(120g)</span>
+									<div class="separator"></div>
+									<span class="foodMenu__price">175 kč</span>
+								</div>
+								<p class="foodMenu__text">
+									Homemade flatbread, baked with cheese, tomatoes sujuk sausage
+								</p>
+							</li>
+							<li>
+								<div class="foodMenu__name">
+									<h4 class="foodMenu__title">Lachmacun</h4> &nbsp;
+									<span class="foodMenu__weight">(80g)</span>
+									<div class="separator"></div>
+									<span class="foodMenu__price">100 kč</span>
+								</div>
+								<p class="foodMenu__text">
+									Homemade flatbread, baked with minced lamb and beef meat, served with tomato lettuce and lemon
+								</p>
+							</li>
+							<li>
+								<div class="foodMenu__name">
+									<h4 class="foodMenu__title">Manti</h4> &nbsp;
+									<span class="foodMenu__weight">(220g)</span>
+									<div class="separator"></div>
+									<span class="foodMenu__price">160 kč</span>
+								</div>
+								<p class="foodMenu__text">
+									Dumplings filled with minced spiced beef meat with yogurt topped with butter
+								</p>
+							</li>
+						</ul>
+					</div>
+					<div class="food__list food__list--dishes">
+						<ul class="foodMenu">
+							<li>
+								<div class="foodMenu__name">
+									<h4 class="foodMenu__title">pita bread</h4> &nbsp;
+									<div class="separator"></div>
+									<span class="foodMenu__price">25 kč</span>
+								</div>
+							</li>
+							<li>
+								<div class="foodMenu__name">
+									<h4 class="foodMenu__title">Fries</h4> &nbsp;
+									<div class="separator"></div>
+									<span class="foodMenu__price">45 kč</span>
+								</div>
+							</li>
+							<li>
+								<div class="foodMenu__name">
+									<h4 class="foodMenu__title">tortilla </h4> &nbsp;
+									<div class="separator"></div>
+									<span class="foodMenu__price">45 kč</span>
+								</div>
+							</li>
+							<li>
+								<div class="foodMenu__name">
+									<h4 class="foodMenu__title">grilled vegetables</h4> &nbsp;
+									<div class="separator"></div>
+									<span class="foodMenu__price">130 kč</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="food__list food__list--deserts">
+						<ul class="foodMenu">
+							<li>
+								<div class="foodMenu__name">
+									<h4 class="foodMenu__title">Turkish Baklava</h4> &nbsp;
+									<div class="separator"></div>
+									<span class="foodMenu__price">60kč</span>
+								</div>
+							</li>
+							<li>
+								<div class="foodMenu__name">
+									<h4 class="foodMenu__title">SÜtlaÇ</h4> &nbsp;
+									<div class="separator"></div>
+									<span class="foodMenu__price">95 kč</span>
+								</div>
+							</li>
+							<li>
+								<div class="foodMenu__name">
+									<h4 class="foodMenu__title">KÜnefe </h4> &nbsp;
+									<div class="separator"></div>
+									<span class="foodMenu__price">140 kč</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="slider__buttons food__buttons">
+						<button class="slider__button slider__button--prev food__button--prev">Prev</button>
+						<button class="slider__button slider__button--next food__button--next">Next</button>
+					</div>
+					<div class="food__sliderNav"></div>
 				</div>
 			</div>
 		</div>

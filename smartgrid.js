@@ -37,12 +37,16 @@ const settings = {
             fields: "68px"
         },
         sm: {
-            width: "696px",
-            fields: "48px"
+            width: "768px",
+            fields: "26px"
+        },
+        msm: {
+            width: "558px",
+            fields: "26px"
         },
         xs: {
             width: "484px",
-            fields: "10px"
+            fields: "26px"
         }
     },
     oldSizeStyle: false
