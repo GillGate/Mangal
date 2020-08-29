@@ -40,6 +40,10 @@ const settings = {
             width: "768px",
             fields: "26px"
         },
+        ssm: {
+            width: "620px",
+            fields: "26px"
+        },
         msm: {
             width: "558px",
             fields: "26px"

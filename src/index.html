@@ -136,8 +136,8 @@
 	<section class="welcome" id="about">
 		<div class="container">
 			<div class="welcome__wrapper">
-			    <div class="welcome__img">
-				   <img src="img/welcome.png" alt="Knife">
+			    <div class="welcome__img lazy">
+				   <img data-src="img/welcome.png" alt="Knife">
 			    </div>
 			    <h2 class="title welcome__title">
 					Welcome to Mangal restaurant
@@ -145,8 +145,8 @@
 			    <div class="welcome__text">
 			    	<p>“Mangal” restaurant was opened in 2015 right in the heart of Prague - on the top of Wenceles square. During this time the restaurant has earned the trust of the residents and guests of Czech Republic.</p>
 			    	<p>Turkish cuisine is startling in its variety and plenty of dishes, which absolutely everyone will like. Dish preparation meets the best Turkish samples, which is confirmed by the professionalism of the chefs from Turkey.</p>
-			    	<p>The specialty of the restaurant is а grill right in the restaurant, that allows guests to watch the process of cooking their dish. The restaurant offers a wide choice of lamb, chicken and veal that cooked on natural coals, and fresh made various meze-starters.</p>
-			    	<p>Guests can also enjoy dishes from the oven such as pide which is boat-shaped bread topped with meat or cheese, and It is impossible not to mention the traditional Turkish desserts. Special attention should be paid to the national drinks such as Ayran and Shalgam. </p>
+			    	<p>The ty of the restaurant is а grill right in the restaurant, that allows guests to watch the process of cooking their dish. The restaurant offers a wide choice of lamb, chicken and veal that cooked on natural coals, and fresh made various meze-starters.</p>
+			    	<p>Guests can also enjoy dishes from the oven such as pide which is boat-shaped bread topped with meat or cheese, and It is impossible not to mention the traditional Turkish desserts.  attention should be paid to the national drinks such as Ayran and Shalgam. </p>
 			    	<p>Only halal meat is used in the preparation of all dishes. Restaurant hall is decorated with all the features of traditional Turkish restaurants. <br>
 			    	Come and enjoy little Turkey in the heart of Prague!</p>
 			    </div>
@@ -479,7 +479,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="food__list food__list--specialitites">
+					<div class="food__list food__list--specialities">
 						<ul class="foodMenu">
 							<li>
 								<div class="foodMenu__name">
@@ -595,11 +595,20 @@
 							</li>
 						</ul>
 					</div>
-					<div class="slider__buttons food__buttons">
-						<button class="slider__button slider__button--prev food__button--prev">Prev</button>
-						<button class="slider__button slider__button--next food__button--next">Next</button>
+					<div class="food__controls food__controls--main">
+						<div class="slider__buttons food__buttons">
+							<button class="slider__button slider__button--prev food__button--prev">Prev</button>
+							<button class="slider__button slider__button--next food__button--next">Next</button>
+						</div>
+						<div class="food__sliderNav"></div>
 					</div>
-					<div class="food__sliderNav"></div>
+					<div class="food__controls food__controls--salads">
+						<div class="slider__buttons food__buttons">
+							<button class="slider__button slider__button--prev food__button--prev">Prev</button>
+							<button class="slider__button slider__button--next food__button--next">Next</button>
+						</div>
+						<div class="food__sliderNav"></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -615,531 +624,500 @@
 				<button class="button drinks__button" data-list="spirits">Spirits</button>
 			</div>
 			<div class="drinks__menu">
-				<ul class="drinks__list drinks__list--hot">
-					<li class="drinks__item">
+				<div class="drinks__list drinks__list--hot">
+					<ul class="drinksMenu">
+						<li class="drinksMenu__option">
+							<h4 class="drinksMenu__title">Hot drinks</h4>
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Espresso
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">55 kč</span>
+							</div>
+						</li>
+						<li class="drinksMenu__option">
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Espresso Lungo
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">55 kč</span>
+							</div>
+						</li>
+						<li class="drinksMenu__option">
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Espresso Doppio
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">95 kč</span>
+							</div>
+						</li>
+						<li class="drinksMenu__option">
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Espresso Macchiato
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">65 kč</span>
+							</div>
+						</li>
+						<li class="drinksMenu__option">
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Cappuccino
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">65 kč</span>
+							</div>
+						</li>
+						<li class="drinksMenu__option">
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Caffe Latte
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">65 kč</span>
+							</div>
+						</li>
+						<li class="drinksMenu__option">
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Turkish Coffe
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">60 kč</span>
+							</div>
+						</li>
+						<li class="drinksMenu__option">
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Turkish Tea
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">45 kč</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="drinks__list drinks__list--soft">
+					<ul class="drinksMenu">
+						<li class="drinksMenu__option">
+							<h4 class="drinksMenu__title">Soft drinks</h4>
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Ayran (0,2l)
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">55 kč</span>
+							</div>
+						</li>
+						<li class="drinksMenu__option">
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Pepsi Cola (0,25l)
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">55 kč</span>
+							</div>
+						</li>
+						<li class="drinksMenu__option">
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Pepsi Cola Light (0,25l)
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">55 kč</span>
+							</div>
+						</li>
+						<li class="drinksMenu__option">
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									7Up (0,25l)
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">55 kč</span>
+							</div>
+						</li>
+						<li class="drinksMenu__option">
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Mirinda (0,25l)
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">55 kč</span>
+							</div>
+						</li>
+						<li class="drinksMenu__option">
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Evervess Tonic, Ginger Ale, (0,25l)
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">55 kč</span>
+							</div>
+						</li>
+						<li class="drinksMenu__option">
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Lipton Ice Tea - By offer (0,25l)
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">55 kč</span>
+							</div>
+						</li>
+						<li class="drinksMenu__option">
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Toma Natura (still/sparkling) (0,25)l)
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">45 kč</span>
+							</div>
+						</li>
+						<li class="drinksMenu__option">
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Vitell (1l)
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">120 kč</span>
+							</div>
+						</li>
+						<li class="drinksMenu__option">
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Perrier Mineralle (sparkling) (0,70l)
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">90 kč</span>
+							</div>
+						</li>
+						<li class="drinksMenu__option">
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Fresh Orange Juice (0,2l)
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">70 kč</span>
+							</div>
+						</li>
+						<li class="drinksMenu__option">
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Tropicana Juice (0,2l)
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">55 kč</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="drinks__list drinks__list--wine drinks__list--active">
+					<ul class="drinksMenu">
+						<li class="drinksMenu__option">
+							<div class="drinksMenu__dosage">0,15l / 0,75l</div>
+							<h4 class="drinksMenu__title">White wine / Bílé víno</h4>
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Chardonay Jakostní - dry, Habánské sklepy, CZ
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">80 / 390 kč</span>
+							</div>
+						</li>
+						<li class="drinksMenu__option">
+							<h4 class="drinksMenu__title">Red wine / Červená vína</h4>
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Rulandské modré, Jakostní - dry, Habánské sklepy, CZ
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">80 / 390 kč</span>
+							</div>
+						</li>
+						<li class="drinksMenu__option">
+							<h4 class="drinksMenu__title">Rose wine / Růžová vína</h4>
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Zweigeltrebe, Jakostní - dry, Habánské sklepy, CZ
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">80 / 390 kč</span>
+							</div>
+						</li>
+						<li class="drinksMenu__option">
+							<div class="drinksMenu__dosage">0,75l</div>
+							<h4 class="drinksMenu__title">Sparkling wine and champagne</h4>
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Bohemia Sekt (Brut, Demi Sec), CZ
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">500 kč</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="drinks__list drinks__list--beer">
+					<ul class="drinksMenu">
+						<li class="drinksMenu__option">
+							<h4 class="drinksMenu__title">Beer</h4>
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Pilesner Urquel (0,3l)
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">60 kč</span>
+							</div>
+						</li>
+						<li class="drinksMenu__option">
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Heineken (0,33l)
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">65 kč</span>
+							</div>
+						</li>
+						<li class="drinksMenu__option">
+							<div class="drinksMenu__text">
+								<p class="drinksMenu__name">
+									Radegast Birel (0,5l)
+								</p>
+								<div class="separator"></div>
+								<span class="drinksMenu__price">55 kč</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="scrollbar-inner">
+					<div class="drinks__list drinks__list--spirits">
 						<ul class="drinksMenu">
-							<li>
-								<h4 class="drinksMenu__title">Hot drinks</h4>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Espresso
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">55 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Espresso Lungo
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">55 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Espresso Doppio
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">95 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Espresso Macchiato
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">65 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Cappuccino
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">65 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Caffe Latte
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">65 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Turkish Coffe
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">60 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Turkish Tea
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">45 kč</span>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="drinks__list drinks__list--soft">
-					<li class="drinks__item">
-						<ul class="drinksMenu">
-							<li>
-								<h4 class="drinksMenu__title">Soft drinks</h4>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Ayran (0,2l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">55 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Pepsi Cola (0,25l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">55 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Pepsi Cola Light (0,25l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">55 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											7Up (0,25l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">55 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Mirinda (0,25l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">55 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Evervess Tonic, Ginger Ale, (0,25l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">55 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Lipton Ice Tea - By offer (0,25l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">55 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Toma Natura (still/sparkling) (0,25)l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">45 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Vitell (1l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">120 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Perrier Mineralle (sparkling) (0,70l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">90 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Fresh Orange Juice (0,2l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">70 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Tropicana Juice (0,2l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">55 kč</span>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="drinks__list drinks__list--wine drinks__list--active">
-					<li class="drinks__item">
-						<ul class="drinksMenu">
-							<li>
-								<div class="drinksMenu__dosage">0,15l / 0,75l</div>
-								<h4 class="drinksMenu__title">White wine / Bílé víno</h4>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Chardonay Jakostní - dry, Habánské sklepy, CZ
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">80 / 390 kč</span>
-									</div>
-								</div>
-							</li>
-							<li>
-								<h4 class="drinksMenu__title">Red wine / Červená vína</h4>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Rulandské modré, Jakostní - dry, Habánské sklepy, CZ
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">80 / 390 kč</span>
-									</div>
-								</div>
-							</li>
-							<li>
-								<h4 class="drinksMenu__title">Rose wine / Růžová vína</h4>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Zweigeltrebe, Jakostní - dry, Habánské sklepy, CZ
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">80 / 390 kč</span>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="drinksMenu__dosage">0,75l</div>
-								<h4 class="drinksMenu__title">Sparkling wine and champagne</h4>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Bohemia Sekt (Brut, Demi Sec), CZ
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">500 kč</span>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="drinks__list drinks__list--beer">
-					<li class="drinks__item">
-						<ul class="drinksMenu">
-							<li>
-								<h4 class="drinksMenu__title">Beer</h4>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Pilesner Urquel (0,3l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">60 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Heineken (0,33l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">65 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Radegast Birel (0,5l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">55 kč</span>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="drinks__list drinks__list--spirits">
-					<li class="drinks__item">
-						<ul class="drinksMenu">
-							<li>
+							<li class="drinksMenu__option">
 								<h4 class="drinksMenu__title">Liquors and Destilates</h4>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Martini (0,1l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">90 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Campari (0,04l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">70 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Aperol (0,04l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">70 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Jagermaster (0,04l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">70 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Becherovka (0,04l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">70 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Yeni Raki (0,04l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">80 kč</span>
-									</div>
+								<div class="drinksMenu__text">
+									<p class="drinksMenu__name">
+										Martini (0,1l)
+									</p>
+									<div class="separator"></div>
+									<span class="drinksMenu__price">90 kč</span>
 								</div>
 							</li>
-							<li>
+							<li class="drinksMenu__option">
+								<div class="drinksMenu__text">
+									<p class="drinksMenu__name">
+										Campari (0,04l)
+									</p>
+									<div class="separator"></div>
+									<span class="drinksMenu__price">70 kč</span>
+								</div>
+							</li>
+							<li class="drinksMenu__option">
+								<div class="drinksMenu__text">
+									<p class="drinksMenu__name">
+										Aperol (0,04l)
+									</p>
+									<div class="separator"></div>
+									<span class="drinksMenu__price">70 kč</span>
+								</div>
+							</li>
+							<li class="drinksMenu__option">
+								<div class="drinksMenu__text">
+									<p class="drinksMenu__name">
+										Jagermaster (0,04l)
+									</p>
+									<div class="separator"></div>
+									<span class="drinksMenu__price">70 kč</span>
+								</div>
+							</li>
+							<li class="drinksMenu__option">
+								<div class="drinksMenu__text">
+									<p class="drinksMenu__name">
+										Becherovka (0,04l)
+									</p>
+									<div class="separator"></div>
+									<span class="drinksMenu__price">70 kč</span>
+								</div>
+							</li>
+							<li class="drinksMenu__option">
+								<div class="drinksMenu__text">
+									<p class="drinksMenu__name">
+										Yeni Raki (0,04l)
+									</p>
+									<div class="separator"></div>
+									<span class="drinksMenu__price">80 kč</span>
+								</div>
+							</li>
+							<li class="drinksMenu__option">
 								<h4 class="drinksMenu__title">Vodka</h4>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Absolute (0,04l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">70 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Finlandia (0,04l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">70 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Russian standart (0,04l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">70 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Belvedere (0,04l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">120 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Beluga (0,04l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">120 kč</span>
-									</div>
+								<div class="drinksMenu__text">
+									<p class="drinksMenu__name">
+										Absolute (0,04l)
+									</p>
+									<div class="separator"></div>
+									<span class="drinksMenu__price">70 kč</span>
 								</div>
 							</li>
-							<li>
+							<li class="drinksMenu__option">
+								<div class="drinksMenu__text">
+									<p class="drinksMenu__name">
+										Finlandia (0,04l)
+									</p>
+									<div class="separator"></div>
+									<span class="drinksMenu__price">70 kč</span>
+								</div>
+							</li>
+							<li class="drinksMenu__option">
+								<div class="drinksMenu__text">
+									<p class="drinksMenu__name">
+										Russian standart (0,04l)
+									</p>
+									<div class="separator"></div>
+									<span class="drinksMenu__price">70 kč</span>
+								</div>
+							</li>
+							<li class="drinksMenu__option">
+								<div class="drinksMenu__text">
+									<p class="drinksMenu__name">
+										Belvedere (0,04l)
+									</p>
+									<div class="separator"></div>
+									<span class="drinksMenu__price">120 kč</span>
+								</div>
+							</li>
+							<li class="drinksMenu__option">
+								<div class="drinksMenu__text">
+									<p class="drinksMenu__name">
+										Beluga (0,04l)
+									</p>
+									<div class="separator"></div>
+									<span class="drinksMenu__price">120 kč</span>
+								</div>
+							</li>
+							<li class="drinksMenu__option">
 								<h4 class="drinksMenu__title">Gin</h4>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Bombay Sapphire (0,04l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">90 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Hendricks (0,04l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">70 kč</span>
-									</div>
+								<div class="drinksMenu__text">
+									<p class="drinksMenu__name">
+										Bombay Sapphire (0,04l)
+									</p>
+									<div class="separator"></div>
+									<span class="drinksMenu__price">90 kč</span>
 								</div>
 							</li>
-						</ul>
-					</li>
-					<li class="drinks__item">
-						<ul class="drinksMenu">
-							<li>
+							<li class="drinksMenu__option">
+								<div class="drinksMenu__text">
+									<p class="drinksMenu__name">
+										Hendricks (0,04l)
+									</p>
+									<div class="separator"></div>
+									<span class="drinksMenu__price">70 kč</span>
+								</div>
+							</li>
+							<li class="drinksMenu__option">
 								<h4 class="drinksMenu__title">Brandy - Cognac</h4>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Metaxa 5 star (0,04l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">90 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Hennesy VS (0,04l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">70 kč</span>
-									</div>
+								<div class="drinksMenu__text">
+									<p class="drinksMenu__name">
+										Metaxa 5 star (0,04l)
+									</p>
+									<div class="separator"></div>
+									<span class="drinksMenu__price">90 kč</span>
 								</div>
 							</li>
-							<li>
+							<li class="drinksMenu__option">
+								<div class="drinksMenu__text">
+									<p class="drinksMenu__name">
+										Hennesy VS (0,04l)
+									</p>
+									<div class="separator"></div>
+									<span class="drinksMenu__price">70 kč</span>
+								</div>
+							</li>
+							<li class="drinksMenu__option">
 								<h4 class="drinksMenu__title">Whisky</h4>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Johny Walker (0,04l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">70 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Chivas Regal (0,04l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">70 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Jack Daniels (0,04l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">70 kč</span>
-									</div>
-								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Jameson (0,04l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">120 kč</span>
-									</div>
+								<div class="drinksMenu__text">
+									<p class="drinksMenu__name">
+										Johny Walker (0,04l)
+									</p>
+									<div class="separator"></div>
+									<span class="drinksMenu__price">70 kč</span>
 								</div>
 							</li>
-							<li>
+							<li class="drinksMenu__option">
+								<div class="drinksMenu__text">
+									<p class="drinksMenu__name">
+										Chivas Regal (0,04l)
+									</p>
+									<div class="separator"></div>
+									<span class="drinksMenu__price">70 kč</span>
+								</div>
+							</li>
+							<li class="drinksMenu__option">
+								<div class="drinksMenu__text">
+									<p class="drinksMenu__name">
+										Jack Daniels (0,04l)
+									</p>
+									<div class="separator"></div>
+									<span class="drinksMenu__price">70 kč</span>
+								</div>
+							</li>
+							<li class="drinksMenu__option">
+								<div class="drinksMenu__text">
+									<p class="drinksMenu__name">
+										Jameson (0,04l)
+									</p>
+									<div class="separator"></div>
+									<span class="drinksMenu__price">120 kč</span>
+								</div>
+							</li>
+							<li class="drinksMenu__option">
 								<h4 class="drinksMenu__title">Rum</h4>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Captain Morgan Spiced (0,04l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">70 kč</span>
-									</div>
+								<div class="drinksMenu__text">
+									<p class="drinksMenu__name">
+										Captain Morgan Spiced (0,04l)
+									</p>
+									<div class="separator"></div>
+									<span class="drinksMenu__price">70 kč</span>
 								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Havana Club (0,04l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">70 kč</span>
-									</div>
+							</li>
+							<li class="drinksMenu__option">
+								<div class="drinksMenu__text">
+									<p class="drinksMenu__name">
+										Havana Club (0,04l)
+									</p>
+									<div class="separator"></div>
+									<span class="drinksMenu__price">70 kč</span>
 								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Diplomatico Rezerva Exclusive (0,04l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">120 kč</span>
-									</div>
+							</li>
+							<li class="drinksMenu__option">
+								<div class="drinksMenu__text">
+									<p class="drinksMenu__name">
+										Diplomatico Rezerva Exclusive (0,04l)
+									</p>
+									<div class="separator"></div>
+									<span class="drinksMenu__price">120 kč</span>
 								</div>
-								<div class="drinksMenu__option">
-									<div class="drinksMenu__text">
-										<p class="drinksMenu__name">
-											Zacapa 23 (0,04l)
-										</p>
-										<div class="separator"></div>
-										<span class="drinksMenu__price">150 kč</span>
-									</div>
+							</li>
+							<li class="drinksMenu__option">
+								<div class="drinksMenu__text">
+									<p class="drinksMenu__name">
+										Zacapa 23 (0,04l)
+									</p>
+									<div class="separator"></div>
+									<span class="drinksMenu__price">150 kč</span>
 								</div>
 							</li>
 						</ul>
-					</li>
-				</ul>
+					</div>
+				</div>
+				<div class="drinks__controls">
+					<div class="slider__buttons drinks__buttons">
+						<button class="slider__button slider__button--prev drinks__button--prev">Prev</button>
+						<button class="slider__button slider__button--next drinks__button--next">Next</button>
+					</div>
+					<div class="drinks__sliderNav"></div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -1150,42 +1128,42 @@
 		<div class="gallerySlider">
 			<div class="gallerySlider__item">
 				<div class="gallerySlider__img">
-					<img src="img/slider-5.jpg" alt="Item-1">
+					<img data-lazy="img/slider-5.jpg" alt="Item-1">
 				</div>
 			</div>
 			<div class="gallerySlider__item">
 				<div class="gallerySlider__img">
-					<img src="img/slider-2.jpg" alt="Item-1">
+					<img data-lazy="img/slider-2.jpg" alt="Item-1">
 				</div>
 			</div>
 			<div class="gallerySlider__item">
 				<div class="gallerySlider__img">
-					<img src="img/slider-1.jpg" alt="Item-1">
+					<img data-lazy="img/slider-1.jpg" alt="Item-1">
 				</div>
 			</div>
 			<div class="gallerySlider__item">
 				<div class="gallerySlider__img">
-					<img src="img/slider-3.jpg" alt="Item-1">
+					<img data-lazy="img/slider-3.jpg" alt="Item-1">
 				</div>
 			</div>
 			<div class="gallerySlider__item">
 				<div class="gallerySlider__img">
-					<img src="img/slider-5.jpg" alt="Item-1">
+					<img data-lazy="img/slider-5.jpg" alt="Item-1">
 				</div>
 			</div>
 			<div class="gallerySlider__item">
 				<div class="gallerySlider__img">
-					<img src="img/slider-4.jpg" alt="Item-1">
+					<img data-lazy="img/slider-4.jpg" alt="Item-1">
 				</div>
 			</div>
 			<div class="gallerySlider__item">
 				<div class="gallerySlider__img">
-					<img src="img/slider-1.jpg" alt="Item-1">
+					<img data-lazy="img/slider-1.jpg" alt="Item-1">
 				</div>
 			</div>
 			<div class="gallerySlider__item">
 				<div class="gallerySlider__img">
-					<img src="img/slider-2.jpg" alt="Item-1">
+					<img data-lazy="img/slider-2.jpg" alt="Item-1">
 				</div>
 			</div>
 		</div>
@@ -1206,16 +1184,18 @@
 			<p class="contacts__text">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
 			</p>
-			<div class="contacts__img">
-				<img src="img/contacts-phone.png" alt="Phone">
+			<div class="contacts__img lazy">
+				<img data-src="img/contacts-phone.png" alt="Phone">
 			</div>
 			<div class="contacts__phone">
 				<p>You can reach us at:</p>
 				<a href="tel:+420222210382">+420 222 210 382</a>
 			</div>
 			<div class="contacts__wrapper">
-				<div class="contacts__map">
-					<img src="img/contacts-map.jpg" alt="Mangal location">
+				<div class="contacts__mapWrapper">
+					<div class="contacts__map">
+						<img src="img/contacts-map.jpg" alt="Mangal location">
+					</div>
 				</div>
 				<div class="contacts__info">
 					<h3>Mangal Restaurant</h3>
@@ -1223,20 +1203,20 @@
 						<p>Václavské nám. 807,</p>
 						<p>110 00 Nové Město</p>
 						<p>Praha 1</p>
-						<p>Tel.: <a href="tel:+420222210382">+420 222 210 382</a></p>
-						<p>Email: <a href="mailto:info@mangalrestaurant.cz">info@mangalrestaurant.cz</a></p>
 					</address>
-					<div class="contacts__links">
-						<a class="contacts__link" href="#">Show in Google Maps</a>
-						<div class="links">
-							<a href="#">
-								<img src="img/facebook.svg" alt="Facebook Page">
-							</a>
-							<a href="#">
-								<img src="img/instagram.svg" alt="Instagram Page">
-							</a>
-						</div>
-					</div>
+				</div>
+				<div class="contacts__links">
+					<p>Tel.: <a href="tel:+420222210382">+420 222 210 382</a></p>
+					<p>Email: <a href="mailto:info@mangalrestaurant.cz">info@mangalrestaurant.cz</a></p>
+					<a class="contacts__link" href="#">Show in Google Maps</a>
+				</div>
+				<div class="links">
+					<a href="#">
+						<img src="img/facebook.svg" alt="Facebook Page">
+					</a>
+					<a href="#">
+						<img src="img/instagram.svg" alt="Instagram Page">
+					</a>
 				</div>
 			</div>
 		</div>

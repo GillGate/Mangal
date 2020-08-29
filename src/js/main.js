@@ -8,8 +8,12 @@ $(function(){
   	nextArrow: '.headerSlider__button--next'
   });
 
+  let lazy = new LazyLoad({
+    elements_selector: ".lazy img"
+  });
+
   $('.gallerySlider').slick({
-    slidesToShow: 5,
+    slidesToShow: 3,
     dots: true,
     appendDots: '.gallerySlider__nav',
     dotsClass: 'gallerySlider__dots',
@@ -17,39 +21,109 @@ $(function(){
     nextArrow: '.gallerySlider__button--next',
     centerMode: true,
     draggable: false,
-    centerPadding: '55px',
+    lazyLoad: 'progressive',
+    centerPadding: '30px',
+    responsive: [
+      {
+        breakpoint: 1046,
+        settings: {
+          centerMode: true,
+          centerPadding: '0px',
+          slidesToShow: 1,
+          fade: true,      
+        }
+      }
+    ]
     // autoplay: true
   });
 
-  let clWidth = document.documentElement.clientWidth;
+let clWidth = document.documentElement.clientWidth;
 
-let foodSliderObj = {
-  prevArrow: '.food__button--prev',
-  nextArrow: '.food__button--next',
-  slidesToShow: 4,
-  slidesToScroll: 4,
-  vertical: true,
-  infinite: false,
-  draggable: false,
-  dots: true,
-  appendDots: '.food__sliderNav',
-  dotsClass: 'food__dots',
+if(clWidth < 751) {
+  $('.food__list--main .foodMenu').slick({
+    prevArrow: '.food__controls--main .food__button--prev',
+    nextArrow: '.food__controls--main .food__button--next',
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    vertical: true,
+    infinite: false,
+    draggable: false,
+    dots: true,
+    appendDots: '.food__controls--main .food__sliderNav',
+    dotsClass: 'food__dots',
+  });
+
+  $('.food__list--salads .foodMenu').slick({
+    prevArrow: '.food__controls--salads .food__button--prev',
+    nextArrow: '.food__controls--salads .food__button--next',
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    vertical: true,
+    infinite: false,
+    draggable: false,
+    dots: true,
+    appendDots: '.food__controls--salads .food__sliderNav',
+    dotsClass: 'food__dots',
+  });
+
+  $('.drinks__list--spirits .drinksMenu').slick({
+    prevArrow: '.drinks__button--prev',
+    nextArrow: '.drinks__button--next',
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    vertical: true,
+    infinite: true,
+    draggable: false,
+    dots: true,
+    appendDots: '.drinks__sliderNav',
+    dotsClass: 'drinks__dots',
+  });
 }
 
 function initFoodSlider() {
   clWidth = document.documentElement.clientWidth;
- 
 
   if(clWidth < 751) {
-    $('.food__list--main .foodMenu').slick(foodSliderObj);
-    // $('.food__list--salads .foodMenu').slick(foodSliderObj);
+    if($('.food__list--main').hasClass('food__list--active')) {
+      $('.food__controls--main').show();
+      $('.food__controls--salads').hide();
+    } else if($('.food__list--salads').hasClass('food__list--active')) {
+      $('.food__controls--salads').show();
+      $('.food__controls--main').hide();
+    } else {
+       $('.food__controls').hide();
+    }
+
+  } else {
+   if($('.food__list .foodMenu').hasClass('slick-slider')) {
+      $('.food__list .foodMenu').slick('unslick');
+    }
   }
 }
 
+function initDrinkSlider() {
+    clWidth = document.documentElement.clientWidth;
+
+    if(clWidth < 751) {
+        if($('.drinks__list--spirits').hasClass('drinks__list--active')) {
+            $('.drinks__controls').show();
+        }  else {
+            $('.drinks__controls').hide();
+        }
+    } else {
+        if($('.drinks__list--spirits .foodMenu').hasClass('slick-slider')) {
+            $('.drinks__list--spirits .foodMenu').slick('unslick');
+            $('.drinks__controls').hide();
+        }
+    }
+}
+
 initFoodSlider();
+initDrinkSlider();
 
   $(window).on('resize', function() {
       initFoodSlider();
+      initDrinkSlider();
   });
 
   $('.scrollbar-inner').scrollbar();
@@ -194,6 +268,8 @@ initFoodSlider();
     let listName = this.getAttribute('data-list');
     $(`.drinks__list--${listName}`).addClass('drinks__list--active');
     $(this).addClass('button--active');
+
+    initDrinkSlider();
   });
 
   let $links = $('.nav__link, .header__scroll, .footer__nav a');

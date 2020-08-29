@@ -5,7 +5,20 @@
 
 	&__nav {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
+		max-width: 1395px;
+		margin: 0 auto;
+
+		.smd-block({
+			flex-wrap: wrap;
+			margin-bottom: -24px;
+			justify-content: center;
+		});
+
+		.sm-block({
+			max-width: 250px;
+			justify-content: space-between;
+		});
 	}
 
 	.button--active {
@@ -13,8 +26,42 @@
 	}
 
 	&__button {
-		margin: 0 55px;
 		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+		border: 2px solid transparent;
+		padding: 0 40px;
+
+		.slg-block({
+			font-size: 18px;
+			line-height: 22px;
+		});
+
+		.smd-block({
+			flex-basis: 30%;
+			max-width: 220px;
+			margin: 0 12px 24px;
+		});
+
+		.lsm-block({
+			flex-basis: 100%;
+			max-width: 250px;
+			margin: 0px 10px 24px;
+		});
+
+		.sm-block({
+			min-width: 120px;
+			margin: 0;
+			padding: 0;
+			margin-bottom: 12px;
+			height: 40px;
+
+			&[data-list="wine"] {
+				flex-basis: 40%;
+			}
+
+			&[data-list="beer"] {
+				flex-basis: 40%;
+			}
+		});
 	}
 
 	&__menu {
@@ -24,16 +71,32 @@
 		margin: 100px auto 0;
 		font-family: Georgia;
 		position: relative;
+		max-width: 1395px;
 
+
+		.sm-block({
+			box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.25);
+			max-width: 550px;
+			max-height: 750px;
+		});
 	}
 
 	&__list {
 		display: flex;
-		max-width: 1300px;
 		box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.25);
 		opacity: 0;
 		transition: all .3s ease;
 		position: absolute;
+		width: 666px;
+
+		.sm-block({
+			width: 100%;
+			box-shadow: none;
+
+			.separator {
+				display: none;
+			}
+		});
 
 		&--active {
 			opacity: 1;
@@ -48,6 +111,7 @@
 					display: block;
 					width: 50x;
 					height: 50px;
+					margin-bottom: 35px;
 					background: url(../img/drinks-hot.svg) no-repeat;
 				}
 			}
@@ -62,6 +126,7 @@
 					display: block;
 					width: 34x;
 					height: 46px;
+					margin-bottom: 35px;
 					background: url(../img/drinks-soft.svg) no-repeat;
 				}
 			}
@@ -82,9 +147,7 @@
 		}
 
 		&--beer {
-			.drinks__item {
-				width: 532px;
-			}
+			width: 533px;
 
 			.drinksMenu {
 				border-right: none;
@@ -94,6 +157,7 @@
 					display: block;
 					width: 30x;
 					height: 52px;
+					margin-bottom: 35px;
 					margin-left: -12px;
 					background: url(../img/drinks-beer.svg) no-repeat;
 				}
@@ -101,42 +165,148 @@
 		}
 
 		&--spirits {
-			.drinksMenu {
-				border: none;
-			}
+			width: 100%;
+			box-shadow: none;
 
-			.drinks__item:first-child {
-				.drinksMenu {
-					border-right: 6px solid @gold-title;
+			.smd-block({
 
-					&::before {
-						content: '';
-						display: block;
-						width: 30x;
-						height: 42px;
-						background: url(../img/drinks-spirits.svg) no-repeat;
-					}
+				&::after {
+					display: none;
 				}
-			}
 
-			.drinks__item:last-child {
 				.drinksMenu {
+					height: auto;
+					flex-wrap: nowrap;
+
+					li {
+						width: 100%;
+
+						&:first-child {
+							margin-right: 0;
+						}
+					}
+
 					&::after {
-						content: '';
-						display: block;
-						width: 300px;
-						height: 112px;
-						margin-top: 92px;
-						margin-left: auto;
-						background: url(../img/drinks-garlic.svg) no-repeat;
+						display: none;
 					}
 				}
-				
+			});
+
+			.sm-block({
+				overflow: hidden;
+				max-width: 100%;
+				padding: 16px;
+				box-sizing: border-box;
+
+				.drinksMenu {
+					// min-height: 22px;
+					// margin-bottom: 0px !important;
+
+					.slick-list {
+						padding-top: 130px;
+					}
+
+					li {
+						outline: none;
+					}
+
+					.drinksMenu__option {
+						// margin-bottom: 0;
+					}
+
+					.drinksMenu__title {
+						// margin-bottom: 10px !important;
+					}
+				}
+			});
+
+			&::after {
+				content: '';
+				display: block;
+				width: 6px;
+				height: 100%;
+				background-color: @gold-headerSlider;
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
 			}
+
+			.drinksMenu {
+				height: 928px;
+				border: none;
+
+				li {
+					width: 46%;
+
+					&:first-child {
+						margin-right: 8%;
+					}
+				}
+
+				&::before {
+					content: '';
+					display: block;
+					width: 38px;
+					height: 42px;
+					margin-bottom: 35px;
+					background: url(../img/drinks-spirits.svg) no-repeat;
+				}
+
+				&::after {
+					content: '';
+					display: block;
+					width: 300px;
+					height: 112px;
+					margin-top: auto;
+    				margin-left: auto;
+					background: url(../img/drinks-garlic.png) no-repeat;
+				}
+			}	
 		}
 	}
 
-	&__item {
-		width: 650px;
+	&__controls {
+		display: none;
+
+		.sm-block({
+			width: 100%;
+			margin-bottom: 30px;
+			
+			button {
+				color: @gold-headerSlider;
+			}
+		});
+	}
+
+	&__buttons {
+		text-align: center;
+	}
+
+	&__dots {
+		.sm-block({
+			margin-top: 20px;
+			display: flex;
+			justify-content: center;
+
+			li {
+				margin: 0px 7px;
+				cursor: pointer;
+			}
+
+			.slick-active {
+				button {
+					background-color: @gold;
+				}
+			}
+
+			button {
+				font-size: 0;
+				background-color: #767574;
+				width: 24px;
+				height: 2px;
+				border: none;
+			}
+		});
 	}
 }

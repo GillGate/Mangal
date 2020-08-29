@@ -10,7 +10,7 @@
 		padding-bottom: 110px;
 
 		.smd-block({
-			background-size: cover;
+			background-image: url(../img/food-bg-mobile.jpg);
 		});
 	}
 
@@ -112,7 +112,8 @@
 
 		.sm-block({
 			padding: 0;
-			padding-bottom: 32px;
+			padding-bottom: 16px;
+			min-height: 340px;
 		});
 
 		.msm-block({
@@ -128,16 +129,11 @@
 		transition: opacity .3s ease;
 		position: absolute;
 
-		.slg-block({
-			// max-width: 1000px;
-		});
-
 		.smd-block({
 			flex-wrap: wrap;
 			width: auto;
 			max-width: 466px;
 			max-height: 770px;
-			// overflow-y: scroll;
 			background-color: transparent;
 		});
 
@@ -160,9 +156,11 @@
 		}
 
 		&--salads {
+			height: 900px;
+
 			.foodMenu {
 				width: 1300px;
-				height: 890px;
+				height: 100%;
 
 				li:first-child {
 					margin-right: 16%;
@@ -185,7 +183,7 @@
 					display: block;
 					width: 322px;
 					height: 114px;
-					background:  url(../img/food-pepper.svg) center no-repeat;
+					background:  url(../img/food-pepper.png) center no-repeat;
 					position: absolute;
 					bottom: 50px;
 					right: 0;
@@ -234,6 +232,18 @@
 					}
 				}
 			});
+
+			.sm-block({
+				.foodMenu {
+					li {
+						height: 112px !important;
+					}
+
+					&::after {
+						display: none;
+					}
+				}
+			});
 		}
 
 		&--main {
@@ -241,6 +251,8 @@
 				width: 1300px;
 				height: 1250px;
 				border-color: transparent;
+				margin-top: -6px;
+    			margin-bottom: -6px;
 
 				li:first-child {
 					margin-right: 16%;
@@ -263,7 +275,7 @@
 					display: block;
 					width: 140px;
 					height: 70px;
-					background: url(../img/food-main.svg) center no-repeat;
+					background: url(../img/food-main.png) center no-repeat;
 					position: absolute;
 					bottom: 30px;
 					left: 25%;
@@ -292,6 +304,7 @@
 			.smd-block({
 				.foodMenu {
 					display: block;
+					margin: 0;
 
 					&::before {
 						display: none;
@@ -309,84 +322,106 @@
 			.smd-block({
 				padding-right: 40px;
 			});
-		
-			.food__item {
-				border: 6px solid transparent;
 
-				.smd-block({
-					&:first-child {
-						border: none;
-
-						&::after {
-							display: none;
-						}
+			.sm-block({
+				.foodMenu {
+					li {
+						height: 112px !important;
 					}
-				});
 
-				&:first-child {
-					border-right: 6px solid @gold-headerSlider;
+					&::after {
+						display: none;
+					}
 				}
-			}
+			});
 		}
 
 		&--dishes {
-			.food__item {
+			.foodMenu {
 				&::after {
 					content: '';
 					display: block;
 					width: 134px;
 					height: 102px;
-					margin: auto;
-					background: url(../img/food-dishes.svg) center no-repeat;
+					margin: 30px auto 0;
+					background: url(../img/food-dishes.png) center no-repeat;
 				}
 			}
+
+			.sm-block({
+				width: 75%;
+
+				.foodMenu {
+					width: 100%;
+				}
+			});
+
+			.msm-block({
+				width: 100%;
+			});
 		}
 
 		&--deserts {
-			.food__item {
+			.foodMenu {
 				&::after {
 					content: '';
 					display: block;
 					width: 148px;
 					height: 138px;
-					margin: auto;
-					background: url(../img/food-mushrooms.svg) center no-repeat;
+					margin: 30px auto 0;
+					background: url(../img/food-mushrooms.png) center no-repeat;
 				}
 			}
+
+			.sm-block({
+				width: 75%;
+
+				.foodMenu {
+					width: 100%;
+				}
+			});
+
+			.msm-block({
+				width: 100%;
+			});
 		}
 
 	}
 
-	&__buttons {
+	&__controls {
 		display: none;
 
 		.sm-block({
-			margin-top: 30px;
 			display: block;
+			margin-top: 30px;
 		});
 	}
 
 	&__dots {
-		margin-top: 20px;
-		display: flex;
+		.sm-block({
+			margin-top: 20px;
+			display: flex;
+			justify-content: center;
 
-		li {
-			margin: 0px 7px;
-			cursor: pointer;
-		}
-
-		.slick-active {
-			button {
-				background-color: @gold;
+			li {
+				margin: 0px 7px;
+				cursor: pointer;
 			}
-		}
 
-		button {
-			font-size: 0;
-			background-color: #767574;
-			width: 24px;
-			height: 2px;
-			border: none;
-		}
+			.slick-active {
+				button {
+					background-color: @gold;
+				}
+			}
+
+			button {
+				font-size: 0;
+				background-color: #767574;
+				width: 24px;
+				height: 2px;
+				border: none;
+			}
+		});
+			
 	}
 }

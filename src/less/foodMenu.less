@@ -1,6 +1,6 @@
 .foodMenu {
 	box-sizing: border-box;
-	padding: 54px 84px 0;
+	padding: 54px 84px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -19,10 +19,6 @@
 	.sm-block({
 		padding-right: 0;
 
-		&::after {
-			display: none !important;
-		}
-
 		.separator {
 			display: none;
 		}
@@ -35,10 +31,6 @@
 		&:last-child {
 			margin-bottom: 0px;
 		}
-
-		.sm-block({
-			height: 112px !important;
-		});
 
 		.msm-block({
 			width: 338px !important;

@@ -166,7 +166,7 @@
 
 		.sm-block({
 		    top: 78%;
-    		right: 12%;
+    		right: 20%;
 
 			a:first-child {
 				margin-right: 24px;
@@ -178,6 +178,10 @@
 			}
 		});
 
+		.ssm-block({
+			right: 10%;
+		});
+
 		.xs-block({
 			right: 10px;
 		});
@@ -186,7 +190,6 @@
 	&__scroll {
 		display: block;
 		position: absolute;
-		// right: 10%;
 		right: 0;
 		bottom: -90px;
 		transform: translateX(-120%);
@@ -212,7 +215,8 @@
 			display: none;
 		});
 
-		&:hover {
+		&:hover,
+		&:focus {
 			color: @gold-headerSlider;
 		}
 

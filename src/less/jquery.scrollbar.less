@@ -3,6 +3,7 @@
   overflow: hidden !important;
   padding: 0 !important;
   position: relative;
+  z-index: 2 !important;
 
   .sm-block({
     width: 100% !important;
@@ -926,4 +927,32 @@
 
 .scroll-bar {
     background-color: #fff !important;
+}
+
+.scroll-content {
+  .sm-block({
+    max-height: 570px !important;
+  });
+}
+
+.drinks__menu {
+  .scrollbar-inner {
+    box-sizing: border-box;
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 928px !important;
+    
+    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.25);
+
+    .smd-block({
+      margin: 0 auto !important;
+      max-width: 666px !important;
+      max-height: 640px !important;
+    });
+
+    .sm-block({
+      box-shadow: none;
+      max-height: 100% !important;
+    });
+  }
 }

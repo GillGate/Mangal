@@ -153,6 +153,7 @@ const js = (done) => {
         'src/js/slick.min.js',
         'src/js/parallax.min.js',
         'src/js/jquery.scrollbar.min.js',
+        'src/js/lazyload.min.js',
         'src/js/main.js'
     ];
 
