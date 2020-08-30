@@ -34,7 +34,6 @@ $(function(){
         }
       }
     ]
-    // autoplay: true
   });
 
 let clWidth = document.documentElement.clientWidth;
@@ -121,10 +120,10 @@ function initDrinkSlider() {
 initFoodSlider();
 initDrinkSlider();
 
-  $(window).on('resize', function() {
-      initFoodSlider();
-      initDrinkSlider();
-  });
+  // $(window).on('resize', function() {
+  //     initFoodSlider();
+  //     initDrinkSlider();
+  // });
 
   $('.scrollbar-inner').scrollbar();
 

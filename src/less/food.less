@@ -149,6 +149,10 @@
 			}
 		});
 
+		.xs-block({
+			overflow: hidden;
+		});
+
 		&--active {
 			opacity: 1 !important;
 			position: relative;
@@ -394,6 +398,16 @@
 		.sm-block({
 			display: block;
 			margin-top: 30px;
+		});
+	}
+
+	&__buttons {
+		.xs-block({
+			text-align: center;
+
+			button {
+				margin: 0;
+			}
 		});
 	}
 
